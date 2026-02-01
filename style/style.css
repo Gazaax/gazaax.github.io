@@ -1,24 +1,33 @@
 :root {
     /*Global*/
     --white: #FFFFFF;
+    --border-radius: 10px;
 
     /*Dark mode*/
-    --background-dark: #0B0B0E;
-    --secondary-background-dark: #111318;
+    --background: #0B0B0E;
+    --secondary-background: #111318;
     --surface-card-dark: #161B22;
-    --border-dark: #30363D;
-    --secondary-text-dark: #8B949E;
-    --accent-dark: #238636;
-    --secondary-accent-dark: #58A6FF;
+    --border: #30363D;
+    --primary-text: #FFFFFF;
+    --secondary-text: #8B949E;
+    --accent: #238636;
+    --secondary-accent: #58A6FF;
+    --box-shadow: 4px 4px 4px 0 rgba(87, 64, 64, 0.25);
+    --logo-filter:none;
 
     /*Light mode*/
-    --background-light: #F2F2F2;
-    --secondary-background-light: #E5E5E5;
-    --border-light: #A8A8A8;
-    --primary-text-light: #1A1A1A;
-    --secondary-text-light: #555555;
-    --accent-light: #22C55E;
-    --secondary-accent-light: #1A4F8C;
+
+    body.light-mode {
+        --background: #F2F2F2;
+        --secondary-background: #E5E5E5;
+        --border: #A8A8A8;
+        --primary-text: #1A1A1A;
+        --secondary-text: #555555;
+        --accent: #22C55E;
+        --secondary-accent: #1A4F8C;
+        --logo-filter: invert(1);
+    }
+
 }
 
 * {
@@ -29,57 +38,61 @@
     list-style: none;
 
     a {
-        color: var(--secondary-text-dark);
+        color: var(--secondary-text);
     }
 }
 
-/*body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body {
     min-height: 100vh;
-    background: #0B0B0E;
-    transition: background 0.3s ease;
+    background: var(--background);
+    transition: background 0.5s ease;
 }
 
-body.light-mode {
-    background: #F2F2F2;
-}*/
 header {
     display: flex;
     justify-content: center;
     padding-top: 1rem;
-    color: var(--secondary-text-dark);
+    color: var(--secondary-text);
     margin: auto;
 
 }
 
+/*Nav barre*/
 nav {
     display: flex;
     align-items: center;
-    background-color: var(--secondary-background-dark);
-    border-radius: 10px;
-    border: 1px solid var(--border-dark);
-    height: 72px;
+    background-color: var(--background);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border);
+    box-shadow: var(--box-shadow);
+    height: 4.5rem;
     padding: 0 1rem;
 }
 
-.logo {
+.brand {
     display: flex;
     align-items: center;
     gap: 1rem;
     margin-right: 17.5rem;
 }
 
-#iconLogo {
-    width: 100px;
-    height: 100px;
+#logo {
+    width: 30px;
+    height: 30px;
+    filter: var(--logo-filter);
+    transition: filter 0.3s ease;
 }
 
-#gazaax {
+.brand-name {
+    display: flex;
+    align-items: baseline;
+    gap: 1.125rem;
+}
+
+#name {
     font-size: 25px;
     font-weight: 600;
-    color: white;
+    color: var(--primary-text);
 }
 
 .menu {
@@ -89,20 +102,21 @@ nav {
     margin-right: 2rem;
 }
 
+/*Switch button*/
 .theme-toggle {
     position: relative;
     width: 70px;
     height: 35px;
-    background: var(--background-dark);
-    border: 1px solid var(--border-dark);
+    background: var(--background);
+    border: 1px solid var(--border);
     border-radius: 50px;
     cursor: pointer;
     transition: background 0.4s ease, border-color 0.4s ease;
 }
 
 .theme-toggle.active {
-    background: var(--accent-light);
-    border-color: var(--accent-light);
+    background: var(--accent);
+    border-color: var(--accent);
 }
 
 .toggle-slider {
