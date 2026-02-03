@@ -43,6 +43,7 @@
 }
 
 body {
+    font-family: 'Inter', sans-serif;
     width: 80%;
     min-height: 100vh;
     margin: auto;
@@ -69,6 +70,7 @@ nav {
     box-shadow: var(--box-shadow);
     height: 4.5rem;
     padding: 0 1rem;
+    transition: background 0.5s ease;
 }
 
 .brand {
@@ -82,7 +84,7 @@ nav {
     width: 30px;
     height: 30px;
     filter: var(--logo-filter);
-    transition: filter 0.3s ease;
+    transition: filter 0.5s ease;
 }
 
 .brand-name {
@@ -113,7 +115,7 @@ nav {
     border: 1px solid var(--border);
     border-radius: 50px;
     cursor: pointer;
-    transition: background 0.4s ease, border-color 0.4s ease;
+    transition: background 0.5s ease, border-color 0.5s ease;
 }
 
 .theme-toggle.active {
@@ -132,7 +134,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.45s cubic-bezier(.68, -0.55, .27, 1.55);
+    transition: transform 0.5s cubic-bezier(.68, -0.55, .27, 1.55);
 }
 
 .theme-toggle.active .toggle-slider {
@@ -147,8 +149,8 @@ nav {
     align-items: center;
     justify-content: center;
     font-size: 14px;
-    transition: opacity 0.3s ease,
-    transform 0.4s ease;
+    transition: opacity 0.5s ease,
+    transform 0.5s ease;
 }
 
 .moon-icon {
@@ -185,53 +187,46 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: calc(100vh - 4.5rem);
+    min-height: calc(100vh - 10rem);
     margin: auto;
     width: 80%;
 }
 
 h1 {
-    display: inline-block;
+    position: relative;
+    display: block;
     text-align: center;
     font-size: 3rem;
     font-weight: 700;
-    width: 500px;
+    max-width: 500px;
     overflow: hidden;
     color: var(--primary-text);
     margin: 0 0 2.9rem 0;
 }
 
-.relative {
-    position: relative;
-    display: flex;
-    gap: 10px;
-}
 
-.cursor {
-    width: 3px;
-    height: 50px;
-    background: #000;
-    animation: curseur 1s ease infinite;
-}
-
-@keyframes curseur {
-    0% {
-        opacity: 0
-    }
-    50% {
-        opacity: 1
-    }
-    100% {
-        opacity: 0
-    }
-
-}
-
-p {
-    color: var(--primary-text);
-}
 .hero-text{
-    margin-bottom: 1rem;
+    color: var(--primary-text);
+    text-align: center;
+    line-height: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+.hero-buttons{
+    margin-top: 2.6rem;
+}
+.btn-primary{
+    background: var(--accent);
+    padding: 10px;
+    border-radius: var(--border-radius);
+    color: white;
+    margin-right: 3.1rem ;
+}
+.btn-secondary{
+    color: var(--secondary-accent);
+    border: 1px solid var(--secondary-accent);
+    padding: 10px;
+    border-radius: var(--border-radius);
 }
 
 

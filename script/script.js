@@ -1,3 +1,5 @@
+
+// Toggle switch
 const toggle = document.getElementById('themeToggle');
 const body = document.body;
 
@@ -19,9 +21,9 @@ if (localStorage.getItem('theme') === 'light') {
     toggle.classList.add('active');
 }
 
+// Hero title
 let texte = document.querySelector("h1");
 let contenu = texte.innerHTML;
-let curseur = document.querySelector(".cursor")
 texte.innerHTML = '';
 
 let index = 0;
@@ -32,6 +34,5 @@ let timer = setInterval(function () {
     }
     else{
         clearInterval(timer);
-        curseur.style.display = "none";
     }
-}, 150)
+}, 100)
