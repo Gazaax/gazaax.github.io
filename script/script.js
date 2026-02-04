@@ -34,5 +34,7 @@ let timer = setInterval(function () {
     }
     else{
         clearInterval(timer);
+        const heroSection = document.querySelector('.hero-section');
+        heroSection.classList.add('start-fade') 
     }
-}, 100)
+}, 80); 

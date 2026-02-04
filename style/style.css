@@ -106,6 +106,43 @@ nav {
     margin-right: 2rem;
 }
 
+.menu a {
+    text-decoration: none;
+    position: relative;
+}
+
+.menu a::before,
+.menu a::after {
+    content: "";
+    position: absolute;
+    display: block;
+    border: 0 solid transparent;
+    width: 0;
+    height: 0;
+    transition: all 0.3s ease;
+}
+
+.menu a::after {
+    top: -10px;
+    left: -10px;
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+}
+
+.menu a::before {
+    right: -10px;
+    bottom: -10px;
+    border-bottom: 2px solid transparent;
+    border-right: 2px solid transparent;
+}
+
+.menu a:hover::before,
+.menu a:hover::after {
+    width: 10px;
+    height: 10px;
+    border-color: var(--secondary-text);
+}
+
 /*Switch button*/
 .theme-toggle {
     position: relative;
@@ -204,7 +241,27 @@ h1 {
     margin: 0 0 2.9rem 0;
 }
 
+.hero-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity:0;
+}
+.start-fade .hero-content{
+    animation: fadeIn 1s ease forwards;
+}
 
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 .hero-text{
     color: var(--primary-text);
     text-align: center;
