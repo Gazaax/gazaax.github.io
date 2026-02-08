@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
     <link href="style/style.css" rel="stylesheet">
     <script defer src="script/script.js"></script>
     <title>Mon portfolio</title>
@@ -32,7 +33,6 @@
         </div>
     </nav>
 </header>
-</body>
 <main>
     <section class="hero-section">
 
@@ -57,29 +57,92 @@
         <h2>## Projets</h2>
         <div class="swiper actu-swiper">
             <div class="swiper-wrapper">
-                <div class="projet-card">
-                    <div class="projet-info">
-                        <div class="projet-icon-section">
-                            <img src="img/devbox.png" alt="icon devbox" class="projet-icon">
-                            <img src="img/api.png" alt="icon api" class="projet-icon">
-                            <a href="https://github.com/Gazaax/PokeDex"><img src="img/github.png" alt="icon github" class="projet-icon"></a>
+                <div class="swiper-slide">
+                    <div class="projet-card">
+                        <div class="projet-info">
+                            <div class="projet-icon-section">
+                                <img alt="icon devbox" class="projet-icon" src="img/devbox.png">
+                                <img alt="icon api" class="projet-icon" src="img/api.png">
+                                <a href="https://github.com/Gazaax/PokeDex"><img alt="icon github" class="projet-icon"
+                                                                                 src="img/github.png"></a>
+                            </div>
+                            <h3>Pokédex</h3>
+                            <p class="projet-description">
+                                Création d'un Pokédex interactif utilisant l'API PokéApi pour l'affichage dynamique des
+                                données
+                            </p>
+                            <div class="projet-techs">
+                                <div class="tech"><span class="dot yellow"></span> JS</div>
+                                <div class="tech"><span class="dot red"></span> HTML</div>
+                                <div class="tech"><span class="dot blue"></span> CSS</div>
+                            </div>
                         </div>
-                        <h3>Pokédex</h3>
-                        <p class="projet-description">
-                            Création d'un Pokédex interactif utilisant l'API PokéApi pour l'affichage dynamique des données
-                        </p>
-                        <div class="projet-techs">
-                            <div class="tech"><span class="dot yellow"></span> JS</div>
-                            <div class="tech"><span class="dot red"></span> HTML</div>
-                            <div class="tech"><span class="dot blue"></span> CSS</div>
+                        <div class="projet-img">
+                            <img alt="Aperçu Pokédex" src="img/pokedex.png">
                         </div>
                     </div>
-                    <div class="projet-img">
-                        <img src="img/pokedex.png" alt="Aperçu Pokédex">
+                </div>
+                <!--projet 2-->
+                <div class="swiper-slide">
+                    <div class="projet-card">
+                        <div class="projet-info">
+                            <div class="projet-icon-section">
+                                <img alt="icon devbox" class="projet-icon" src="img/devbox.png">
+                                <img alt="icon api" class="projet-icon" src="img/api.png">
+                                <a href="https://github.com/Gazaax/PokeDex"><img alt="icon github" class="projet-icon"
+                                                                                 src="img/github.png"></a>
+                            </div>
+                            <h3>Pokédex</h3>
+                            <p class="projet-description">
+                                Création d'un Pokédex interactif utilisant l'API PokéApi pour l'affichage dynamique des
+                                données
+                            </p>
+                            <div class="projet-techs">
+                                <div class="tech"><span class="dot yellow"></span> JS</div>
+                                <div class="tech"><span class="dot red"></span> HTML</div>
+                                <div class="tech"><span class="dot blue"></span> CSS</div>
+                            </div>
+                        </div>
+                        <div class="projet-img">
+                            <img alt="Aperçu Pokédex" src="img/pokedex.png">
+                        </div>
+                    </div>
+                </div>
+                <!--                    Projet 3-->
+                <div class="swiper-slide">
+                    <div class="projet-card">
+                        <div class="projet-info">
+                            <div class="projet-icon-section">
+                                <img alt="icon devbox" class="projet-icon" src="img/devbox.png">
+                                <img alt="icon api" class="projet-icon" src="img/api.png">
+                                <a href="https://github.com/Gazaax/PokeDex"><img alt="icon github" class="projet-icon"
+                                                                                 src="img/github.png"></a>
+                            </div>
+                            <h3>Pokédex</h3>
+                            <p class="projet-description">
+                                Création d'un Pokédex interactif utilisant l'API PokéApi pour l'affichage dynamique des
+                                données
+                            </p>
+                            <div class="projet-techs">
+                                <div class="tech"><span class="dot yellow"></span> JS</div>
+                                <div class="tech"><span class="dot red"></span> HTML</div>
+                                <div class="tech"><span class="dot blue"></span> CSS</div>
+                            </div>
+                        </div>
+                        <div class="projet-img">
+                            <img alt="Aperçu Pokédex" src="img/pokedex.png">
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
         </div>
     </section>
 </main>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+
 </html>

@@ -37,4 +37,18 @@ let timer = setInterval(function () {
         const heroSection = document.querySelector('.hero-section');
         heroSection.classList.add('start-fade') 
     }
-}, 80);  
+}, 80);
+
+// Swiper
+if (document.querySelector('.swiper')) {
+    new Swiper('.swiper', {
+        loop: true,
+        pagination: { el: '.swiper-pagination' ,
+        clickable: true,
+        dynamicBullets: false,},
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+}

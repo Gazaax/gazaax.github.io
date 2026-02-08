@@ -238,9 +238,9 @@ h1 {
     position: relative;
     display: block;
     text-align: center;
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 700;
-    max-width: 500px;
+    max-width: 700px;
     overflow: hidden;
     color: var(--primary-text);
     margin: 0 0 2.9rem 0;
@@ -355,7 +355,9 @@ h1 {
 }
 
 .actu-swiper {
-    width: 100%
+    position: relative;
+    width: 100%;
+    padding-bottom: 60px;
 }
 
 .projet-card {
@@ -384,7 +386,6 @@ h1 {
 
 .projet-icon-section {
     display: flex;
-    align-items: center;
     gap: 1rem;
 }
 
@@ -402,15 +403,13 @@ h1 {
 .projet-description {
     color: var(--secondary-text);
     line-height: 1.6;
-    font-size: 1rem;
     max-width: 90%;
 }
 
-/* Technologies */
 .projet-techs {
     display: flex;
     gap: 1.5rem;
-    margin-top: 1rem;
+    margin-top: 1.2rem;
 }
 
 .tech {
@@ -423,16 +422,16 @@ h1 {
 }
 
 .dot {
-    width: 12px;
-    height: 12px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
 }
 
-.yellow { background-color: #F1E05A; }
-.red { background-color: #E34C26; }
-.blue { background-color: #563D7C; }
+.yellow { background-color: #CFCF09; }
+.red { background-color: #FF0000; }
+.blue { background-color: #0000FF; }
 
-/* Colonne de droite : Image */
+
 .projet-img {
     flex: 1;
     display: flex;
@@ -450,3 +449,42 @@ h1 {
 .projet-card:hover .projet-img img {
     transform: scale(1.02);
 }
+
+
+
+.swiper-pagination-bullet {
+    background: var(--secondary-text);
+    opacity: 0.6;
+    width: 12px;
+    height: 12px;
+    transition: 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: var(--primary-text);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--secondary-text);
+    background: rgba(0, 0, 0, 0.25);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background: rgba(0, 0, 0, 0.45);
+    transform: scale(1.1);
+}
+
+/* Icons inside arrows */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 20px;
+}
+
+
