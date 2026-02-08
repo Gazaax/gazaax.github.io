@@ -37,4 +37,4 @@ let timer = setInterval(function () {
         const heroSection = document.querySelector('.hero-section');
         heroSection.classList.add('start-fade') 
     }
-}, 80); 
+}, 80);  
