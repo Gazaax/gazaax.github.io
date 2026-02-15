@@ -4,22 +4,40 @@ const toggle = document.getElementById('themeToggle');
 const body = document.body;
 
 toggle.addEventListener('click', () => {
-    // 1. Bascule la classe active pour le déplacement de la pastille
     toggle.classList.toggle('active');
 
-    // 2. Bascule le mode clair sur le body pour changer les variables
     body.classList.toggle('light-mode');
 
-    // 3. Sauvegarde le choix
     const isLight = body.classList.contains('light-mode');
     localStorage.setItem('theme', isLight ? 'light' : 'dark');
 });
 
-// Vérification au chargement
 if (localStorage.getItem('theme') === 'light') {
     body.classList.add('light-mode');
     toggle.classList.add('active');
 }
+
+//nav barre qui apparait et disparait
+let lastScroll = 0;
+const header = document.querySelector("header");
+
+window.addEventListener("scroll", () => {
+    const currentScroll = window.scrollY;
+
+    if (currentScroll <= 0) {
+        header.classList.remove("hidden");
+        return;
+    }
+
+    if (currentScroll > lastScroll && !header.classList.contains("hidden")) {
+        header.classList.add("hidden");
+    }
+    else if (currentScroll < lastScroll && header.classList.contains("hidden")) {
+        header.classList.remove("hidden");
+    }
+
+    lastScroll = currentScroll;
+});
 
 // Hero title
 let texte = document.querySelector("h1");
