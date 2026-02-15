@@ -70,3 +70,65 @@ if (document.querySelector('.swiper')) {
         },
     });
 }
+
+// Hover img
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+let currentGallery = []; // Tableau des images du projet actuel
+let currentIndex = 0;
+
+document.querySelectorAll('.lien-conteneur-img').forEach(lien => {
+    lien.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        // 1. On récupère la liste des images depuis l'attribut data-gallery
+        const galleryData = lien.getAttribute('data-gallery');
+        currentGallery = galleryData.split(','); // Transforme la chaîne en tableau
+
+        currentIndex = 0; // On commence à la première image du projet
+        updateLightbox();
+        lightbox.classList.add('active');
+    });
+});
+
+function updateLightbox() {
+    lightboxImg.src = currentGallery[currentIndex];
+}
+
+// Bouton Suivant
+document.querySelector('.next-btn').addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (currentGallery.length > 1) {
+        currentIndex = (currentIndex + 1) % currentGallery.length;
+        updateLightbox();
+    }
+});
+
+// Bouton Précédent
+document.querySelector('.prev-btn').addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (currentGallery.length > 1) {
+        currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+        updateLightbox();
+    }
+});
+
+window.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('active') || currentGallery.length <= 1) return;
+
+    if (e.key === "ArrowRight") {
+        currentIndex = (currentIndex + 1) % currentGallery.length;
+        updateLightbox();
+    } else if (e.key === "ArrowLeft") {
+        currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+        updateLightbox();
+    } else if (e.key === "Escape") {
+        lightbox.classList.remove('active');
+    }
+});
+
+// Fermer
+lightbox.addEventListener('click', () => {
+    lightbox.classList.remove('active');
+});
+
