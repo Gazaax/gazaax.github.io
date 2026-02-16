@@ -132,3 +132,38 @@ lightbox.addEventListener('click', () => {
     lightbox.classList.remove('active');
 });
 
+window.addEventListener('scroll', () => {
+    const container = document.querySelector('.timeline-container');
+    const progressBar = document.querySelector('.timeline-progress-bar');
+    const items = document.querySelectorAll('.timeline-item');
+    const lastItem = document.querySelector('.timeline-list'); // Utilise la liste pour le point final
+
+    const rect = container.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    // Seuil de déclenchement : l'animation commence quand le conteneur 
+    // est à 80% du bas de l'écran (plus tôt qu'avant)
+    const triggerPoint = windowHeight * 0.8;
+
+    // On calcule la distance parcourue depuis le haut du conteneur
+    const distanceScrolled = triggerPoint - rect.top;
+
+    // On convertit en pourcentage (0 à 100)
+    // On ajoute un petit multiplicateur (ex: 1.2) si on veut que la ligne 
+    // descende un peu plus vite que le scroll
+    let progress = (distanceScrolled / rect.height) * 100;
+
+    // Sécurité pour rester entre 0 et 100%
+    progress = Math.max(0, Math.min(100, progress));
+
+    progressBar.style.height = `${progress}%`;
+
+    // Révélation des items
+    items.forEach(item => {
+        const itemRect = item.getBoundingClientRect();
+        if (itemRect.top < windowHeight * 0.85) { // Seuil d'apparition du texte
+            item.classList.add('revealed');
+        }
+    });
+});
+
