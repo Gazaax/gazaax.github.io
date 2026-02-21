@@ -1,0 +1,51 @@
+:root {
+    /*Global*/
+    --white: #FFFFFF;
+    --border-radius: 10px;
+
+    /* --- Dark mode --- */
+    --background-color: #0B0B0E;
+    --secondary-background: #111318;
+    --surface-card: #161B22;
+    --border-color: #30363D;
+    --primary-text: #FFFFFF;
+    --secondary-text: #8B949E;
+    --accent-color: #238636;
+    --secondary-accent-color: #58A6FF;
+    --box-shadow: 4px 4px 4px 0 rgba(87, 64, 64, 0.25);
+    --logo-filter: none;
+
+    /* --- Light mode --- */
+    body.light-mode {
+        --background-color: #F2F2F2;
+        --secondary-background: #E5E5E5;
+        --surface-card: #D0D0D0;
+        --border-color: #A8A8A8;
+        --primary-text: #1A1A1A;
+        --secondary-text: #555555;
+        --accent-color: #22C55E;
+        --secondary-accent-color: #1A4F8C;
+    }
+
+    /* --- Font Sizes --- */
+    --fs-h1: 3.5rem;
+    --fs-h2: 3rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+    --fs-small: 0.9rem;
+
+    /* --- Weights --- */
+    --fw-bold: 700;
+    --fw-semibold: 600;
+    --fw-regular: 400;
+
+    /* --- Line Heights --- */
+    --lh-base: 1.7;
+    --lh-title: 1.2;
+
+    /* --- Spacing --- */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2.9rem;
+
+}

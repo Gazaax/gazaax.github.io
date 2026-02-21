@@ -1,0 +1,78 @@
+nav {
+    display: flex;
+    align-items: center;
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--box-shadow);
+    height: 4.5rem;
+    padding: 0 2rem;
+    transition: background 0.5s ease;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.brand-name {
+    display: flex;
+    align-items: baseline;
+    gap: 1.125rem;
+    margin-right: 17.5rem;
+}
+#name {
+    font-size: 25px;
+    font-weight: var(--fw-semibold);
+    color: var(--primary-text);
+}
+
+#logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-right: 2rem;
+}
+
+.menu a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.menu a::before,
+.menu a::after {
+    content: "";
+    position: absolute;
+    display: block;
+    border: 0 solid transparent;
+    width: 0;
+    height: 0;
+    transition: all 0.3s ease;
+}
+
+.menu a::after {
+    top: -10px;
+    left: -10px;
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+}
+
+.menu a::before {
+    right: -10px;
+    bottom: -10px;
+    border-bottom: 2px solid transparent;
+    border-right: 2px solid transparent;
+}
+
+.menu a:hover::before,
+.menu a:hover::after {
+    width: 10px;
+    height: 10px;
+    border-color: var(--secondary-text);
+}

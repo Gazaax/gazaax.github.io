@@ -5,7 +5,8 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
-    <link href="style/style.css" rel="stylesheet">
+    <link href="style/main.css" rel="stylesheet">
+    <!--    <link href="style/style.css" rel="stylesheet">-->
     <script defer src="script/script.js"></script>
     <title>Mon portfolio</title>
 </head>
@@ -45,11 +46,11 @@
             <div class="hero-buttons">
                 <a class="btn-primary" href="https://github.com/Gazaax">[ Voir mes commits ]</a>
                 <a class="btn-secondary" href="mailto:quentintibodev@gmail.com">[ Me contacter ]</a>
-                <div class="scroll-downs">
-                    <div class="mousey">
-                        <div class="scroller"></div>
-                    </div>
-                </div>
+            </div>
+        </div>
+        <div class="scroll-downs">
+            <div class="mousey">
+                <div class="scroller"></div>
             </div>
         </div>
     </section>
@@ -78,7 +79,8 @@
                             </div>
                         </div>
                         <div class="projet-img">
-                            <a href="#" class="lien-conteneur-img" data-gallery="img/pokedex.png" onclick="return false;">
+                            <a class="lien-conteneur-img" data-gallery="img/pokedex.png" href="#"
+                               onclick="return false;">
                                 <img alt="Aperçu Pokédex" src="img/pokedex.png">
                                 <div class="img-hover">Voir la photo</div>
                             </a>
@@ -108,7 +110,9 @@
                             </div>
                         </div>
                         <div class="projet-img">
-                            <a href="#" class="lien-conteneur-img" data-gallery="img/medicare-1.png, img/medicare-2.png, img/medicare-3.png, img/medicare-4.png" onclick="return false;">
+                            <a class="lien-conteneur-img" data-gallery="img/medicare-1.png, img/medicare-2.png, img/medicare-3.png, img/medicare-4.png"
+                               href="#"
+                               onclick="return false;">
                                 <img alt="Aperçu mediCare" src="img/medicare-1.png">
                                 <div class="img-hover">Voir la photo</div>
                             </a>
@@ -138,7 +142,9 @@
                             </div>
                         </div>
                         <div class="projet-img">
-                            <a href="#" class="lien-conteneur-img" data-gallery="img/memorycard-1.png, img/memorycard-2.png, img/memorycard-3.png" onclick="return false;">
+                            <a class="lien-conteneur-img" data-gallery="img/memorycard-1.png, img/memorycard-2.png, img/memorycard-3.png"
+                               href="#"
+                               onclick="return false;">
                                 <img alt="Aperçu MemoryCard" src="img/memorycard-1.png">
                                 <div class="img-hover">Voir la photo</div>
                             </a>
@@ -160,7 +166,8 @@
                     <div class="timeline-dot"></div>
                     <div class="content-original">
                         <h3>2020 - L'origine</h3>
-                        <p>Premiers pas dans le développement web avec l'apprentissage du HTML et du CSS en milieu scolaire.</p>
+                        <p>Premiers pas dans le développement web avec l'apprentissage du HTML et du CSS en milieu
+                            scolaire.</p>
                         <p>C'est là qu'est née ma passion pour la création d'interfaces.</p>
                     </div>
                 </li>
@@ -177,7 +184,8 @@
                     <div class="timeline-dot"></div>
                     <div class="content">
                         <h3>Fin 2025 - L'ouverture Fullstack</h3>
-                        <p>Immersion dans l'écosystème JavaScript pour la création d'interfaces dynamiques et découverte de PostgreSQL pour la gestion de bases de données relationnelles avancées.</p>
+                        <p>Immersion dans l'écosystème JavaScript pour la création d'interfaces dynamiques et découverte
+                            de PostgreSQL pour la gestion de bases de données relationnelles avancées.</p>
                         <p>Une transition majeure vers des outils de pointe</p>
                     </div>
                 </li>
@@ -186,7 +194,8 @@
                     <div class="content">
                         <h3>Maintenant - L'évolution</h3>
                         <p>Focus intensif sur l'écosystème MERN (MongoDB, Express, React, Node.js).</p>
-                        <p>Je me concentre sur la création d'applications Fullstack performantes, avec une architecture scalable et une expérience utilisateur fluide</p>
+                        <p>Je me concentre sur la création d'applications Fullstack performantes, avec une architecture
+                            scalable et une expérience utilisateur fluide</p>
                     </div>
                 </li>
             </ul>
@@ -194,10 +203,10 @@
     </section>
 
 
-    <div id="lightbox" class="lightbox">
+    <div class="lightbox" id="lightbox">
         <span class="close-lightbox">&times;</span>
         <button class="prev-btn">&#10094;</button>
-        <img src="" alt="Image agrandie" id="lightbox-img">
+        <img alt="Image agrandie" id="lightbox-img" src="">
         <button class="next-btn">&#10095;</button>
     </div>
 </main>

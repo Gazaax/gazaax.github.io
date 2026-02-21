@@ -1,0 +1,40 @@
+h1, h2, h3 {
+    color: var(--primary-text);
+    line-height: var(--lh-title);
+}
+
+h1 {
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-bold);
+    margin-bottom: var(--space-md);
+    max-width: 700px;
+    text-align: center;
+}
+
+h2 {
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-semibold);
+    margin-bottom: 3rem;
+}
+
+h3 {
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-semibold);
+    margin-bottom: 12px;
+}
+
+p {
+    font-size: var(--fs-body);
+    color: var(--secondary-text);
+    line-height: var(--lh-base);
+}
+
+.hero-text {
+    font-weight: var(--fw-semibold);
+    line-height: 2rem;
+    text-align: center;
+}
+
+.projet-description {
+    max-width: 90%;
+}
