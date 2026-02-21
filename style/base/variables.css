@@ -3,6 +3,18 @@
     --white: #FFFFFF;
     --border-radius: 10px;
 
+    --html-color: #E34C26;
+    --css-color: #264DE4;
+    --js-color: #F7DF1E;
+    --pg-color: #336791;
+    --mysql-color: #00758F;
+    --code-bg: #0D1117;
+    --code-header: #161B22;
+    --code-text: #C9D1D9;
+    --code-comment: #8B949E;
+    --code-keyword: #79C0FF;
+    --code-operator: #D2A8FF;
+
     /* --- Dark mode --- */
     --background-color: #0B0B0E;
     --secondary-background: #111318;

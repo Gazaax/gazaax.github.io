@@ -7,6 +7,7 @@
     width: 100%;
     padding:0 5%;
     position: relative;
+    margin-bottom: 10rem;
 }
 
 .hero-content {
@@ -24,10 +25,12 @@
 }
 
 .hero-text {
-    color: var(--primary-text);
     line-height: 2rem;
-    font-weight: 600;
     margin: 2rem 0 0 0;
+}
+.hero-text p{
+    color: var(--primary-text);
+    font-weight: var(--fw-semibold);
 }
 
 .scroll-downs {
@@ -63,6 +66,7 @@
     background-color: var(--background-color);
     padding: 100px 10%;
     width: 100%;
+    margin-top: 5rem;
 }
 
 .timeline-container {
@@ -155,4 +159,110 @@
 }
 .content-original {
     margin-bottom: 5rem;
+}
+
+.skills-section {
+    padding: 60px 5%;
+    background-color: var(--background-color);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.stack-card {
+    background-color: var(--code-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.stack-header {
+    background-color: var(--code-header);
+    padding: 10px 15px;
+    border-bottom: 1px solid var(--border-color);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    color: var(--code-text);
+}
+
+.stack-body {
+    padding: 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+
+.stack-line {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.line-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.code-keyword { color: var(--code-keyword); font-weight: bold; }
+.code-operator { color: var(--code-operator); }
+
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-left: 30px;
+    margin-top: 8px;
+}
+
+.tech-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.progress-container {
+    flex-grow: 1;
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    border-radius: 10px;
+    transition: width 1.5s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+
+.html-bar { background-color: var(--html-color); box-shadow: 0 0 10px var(--html-color); }
+.css-bar  { background-color: var(--css-color);  box-shadow: 0 0 10px var(--css-color); }
+.js-bar   { background-color: var(--js-color);   box-shadow: 0 0 10px var(--js-color); }
+
+.percentage {
+    font-family: monospace;
+    color: var(--code-comment);
+    font-size: 0.85rem;
+    min-width: 60px;
+    text-align: right;
+}
+
+
+.empty {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.learning .tech-icon {
+    filter: grayscale(100%);
+    opacity: 0.5;
 }

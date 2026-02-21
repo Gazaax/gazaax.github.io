@@ -29,12 +29,6 @@ p {
     line-height: var(--lh-base);
 }
 
-.hero-text {
-    font-weight: var(--fw-semibold);
-    line-height: 2rem;
-    text-align: center;
-}
-
 .projet-description {
     max-width: 90%;
 }

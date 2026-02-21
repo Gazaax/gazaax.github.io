@@ -70,12 +70,32 @@ if (document.querySelector('.swiper')) {
         },
     });
 }
-
+// AOS
+if (typeof AOS !== 'undefined' && document.querySelector('[data-aos]')) {
+    AOS.init();
+}
 // Hover img
+const prevBtn = document.querySelector('.prev-btn')
+const nextBtn = document.querySelector('.next-btn')
+
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 let currentGallery = []; // Tableau des images du projet actuel
 let currentIndex = 0;
+
+function updateLightbox() {
+    lightboxImg.src = currentGallery[currentIndex];
+}
+
+function toggleNavigationArrows(){
+    if (currentGallery.length <= 1){
+        prevBtn.style.display = 'none';
+        nextBtn.style.display = 'none';
+    }else{
+        prevBtn.style.display = 'block';
+        nextBtn.style.display = 'block';
+    }
+}
 
 document.querySelectorAll('.lien-conteneur-img').forEach(lien => {
     lien.addEventListener('click', (e) => {
@@ -86,29 +106,28 @@ document.querySelectorAll('.lien-conteneur-img').forEach(lien => {
         currentGallery = galleryData.split(','); // Transforme la chaîne en tableau
 
         currentIndex = 0; // On commence à la première image du projet
+        toggleNavigationArrows()
         updateLightbox();
         lightbox.classList.add('active');
     });
 });
 
-function updateLightbox() {
-    lightboxImg.src = currentGallery[currentIndex];
-}
-
 // Bouton Suivant
-document.querySelector('.next-btn').addEventListener('click', (e) => {
+ nextBtn.addEventListener('click', (e) => {
     e.stopPropagation();
     if (currentGallery.length > 1) {
         currentIndex = (currentIndex + 1) % currentGallery.length;
+        toggleNavigationArrows();
         updateLightbox();
     }
 });
 
 // Bouton Précédent
-document.querySelector('.prev-btn').addEventListener('click', (e) => {
+prevBtn.addEventListener('click', (e) => {
     e.stopPropagation();
     if (currentGallery.length > 1) {
         currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+        toggleNavigationArrows()
         updateLightbox();
     }
 });

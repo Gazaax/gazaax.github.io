@@ -2,13 +2,12 @@
 .projets-section {
     background: var(--secondary-background);
     padding: 4rem 0;
-    height: 100vh;
 }
 
 .projets-section h2 {
     color: var(--primary-text);
     font-size: 3rem;
-    font-weight: 600;
+    font-weight: var(--fw-semibold);
     margin: 0 0 3rem 6.5rem;
     transition: color 0.5s ease;
 }
@@ -140,12 +139,12 @@
 
 .swiper-pagination-bullet-active {
     opacity: 1;
-    background: var(--primary-text);
+    background: var(--accent-color);
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-    color: var(--secondary-text);
+    color: var(--accent-color);
     background: rgba(0, 0, 0, 0.25);
     width: 45px;
     height: 45px;
