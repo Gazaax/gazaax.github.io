@@ -5,7 +5,7 @@
     justify-content: center;
     height: 100vh;
     width: 100%;
-    padding:0 5%;
+    padding: 0 5%;
     position: relative;
     margin-bottom: 10rem;
 }
@@ -20,6 +20,7 @@
     max-width: 800px;
     opacity: 0;
 }
+
 .hero-buttons {
     margin-top: var(--space-md);
 }
@@ -28,7 +29,8 @@
     line-height: 2rem;
     margin: 2rem 0 0 0;
 }
-.hero-text p{
+
+.hero-text p {
     color: var(--primary-text);
     font-weight: var(--fw-semibold);
 }
@@ -64,9 +66,8 @@
 /* --- Timeline section --- */
 .experience {
     background-color: var(--background-color);
-    padding: 100px 10%;
     width: 100%;
-    margin-top: 5rem;
+    margin-top: 12rem;
 }
 
 .timeline-container {
@@ -74,6 +75,10 @@
     max-width: 900px;
     margin: 0 auto;
     padding-left: 60px;
+}
+
+.content-original {
+    margin-bottom: 5rem;
 }
 
 /* La ligne verte (gauche)*/
@@ -140,10 +145,9 @@
 .timeline-item.current .timeline-dot {
     background-color: var(--background-color);
     border: 2px solid var(--accent-color);
-    box-shadow:var(--box-shadow);
-    left:-25.5px;
+    box-shadow: var(--box-shadow);
+    left: -25.5px;
 }
-
 
 
 /* Ajout du cercle gris décoratif tout en bas */
@@ -157,20 +161,19 @@
     border-radius: 50%;
     background: var(--background-color);
 }
-.content-original {
-    margin-bottom: 5rem;
-}
+
+/* --- Skills section --- */
 
 .skills-section {
-    padding: 60px 5%;
+    padding: 12rem 5%;
     background-color: var(--background-color);
 }
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3.5rem;
+    max-width: 1600px;
     margin: 0 auto;
 }
 
@@ -180,7 +183,7 @@
     border: 1px solid var(--border-color);
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .stack-header {
@@ -211,8 +214,14 @@
     margin-bottom: 10px;
 }
 
-.code-keyword { color: var(--code-keyword); font-weight: bold; }
-.code-operator { color: var(--code-operator); }
+.code-keyword {
+    color: var(--code-keyword);
+    font-weight: bold;
+}
+
+.code-operator {
+    color: var(--code-operator);
+}
 
 
 .skill-item {
@@ -224,13 +233,13 @@
 }
 
 .tech-icon {
-    width: 24px;
-    height: 24px;
+    width: 35px;
+    height: 35px;
     object-fit: contain;
 }
 
 .progress-container {
-    flex-grow: 1;
+    flex-grow: 0.7;
     height: 6px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
@@ -245,16 +254,22 @@
 }
 
 
-.html-bar { background-color: var(--html-color); box-shadow: 0 0 10px var(--html-color); }
-.css-bar  { background-color: var(--css-color);  box-shadow: 0 0 10px var(--css-color); }
-.js-bar   { background-color: var(--js-color);   box-shadow: 0 0 10px var(--js-color); }
+.html-bar {
+    background-color: var(--html-color);
+    box-shadow: 0 0 10px var(--html-color);
+    width: 80%;
+}
 
-.percentage {
-    font-family: monospace;
-    color: var(--code-comment);
-    font-size: 0.85rem;
-    min-width: 60px;
-    text-align: right;
+.css-bar {
+    background-color: var(--css-color);
+    box-shadow: 0 0 10px var(--css-color);
+    width: 80%;
+}
+
+.js-bar {
+    background-color: var(--js-color);
+    box-shadow: 0 0 10px var(--js-color);
+    width: 60%;
 }
 
 
