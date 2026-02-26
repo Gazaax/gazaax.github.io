@@ -166,7 +166,6 @@
 
 .skills-section {
     padding: 12rem 5%;
-    background-color: var(--background-color);
 }
 
 .skills-grid {
@@ -183,21 +182,20 @@
     border: 1px solid var(--border-color);
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--box-shadow);
 }
 
 .stack-header {
     background-color: var(--code-header);
-    padding: 10px 15px;
+    padding: 20px 15px;
     border-bottom: 1px solid var(--border-color);
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 0.9rem;
-    color: var(--code-text);
+    font-size: 1.1rem;
+    font-weight: var(--fw-semibold);
+    color: var(--primary-text);
 }
 
 .stack-body {
     padding: 20px;
-    font-family: 'Inter', sans-serif;
 }
 
 
@@ -220,7 +218,8 @@
 }
 
 .code-operator {
-    color: var(--code-operator);
+    color: var(--code-keyword);
+    font-weight: normal;
 }
 
 
@@ -239,12 +238,12 @@
 }
 
 .progress-container {
-    flex-grow: 0.7;
+    width: 600px ;
+    flex-shrink: 0;
     height: 6px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--container-bar) ;
     border-radius: 10px;
     position: relative;
-    overflow: hidden;
 }
 
 .progress-bar {
@@ -271,13 +270,27 @@
     box-shadow: 0 0 10px var(--js-color);
     width: 60%;
 }
+.pg-bar{
+    background-color: var(--pg-color);
+    box-shadow: 0 0 10px var(--pg-color);
+    width: 70%;
+}
+.webStorm-bar{
+    background-color: var(--webStorm-color);
+    box-shadow: 0 0 10px var(--webStorm-color);
+    width: 70%;
+}
+
+.skill-tags{
+    color: var(--secondary-text);
+}
 
 
 .empty {
+    width: 350px;
+    flex-shrink: 0;
+    height: 6px;
+    border-radius: 10px;
+    position: relative;
     background-color: rgba(255, 255, 255, 0.05);
-}
-
-.learning .tech-icon {
-    filter: grayscale(100%);
-    opacity: 0.5;
 }
