@@ -179,7 +179,7 @@
 
 .stack-card {
     background-color: var(--code-bg);
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--border-stack);
     border-radius: 8px;
     overflow: hidden;
     box-shadow: var(--box-shadow);
@@ -230,15 +230,21 @@
     padding-left: 30px;
     margin-top: 8px;
 }
-
+.tech-icons-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 160px;
+    flex-shrink: 0;
+}
 .tech-icon {
-    width: 35px;
-    height: 35px;
-    object-fit: contain;
+    height: 30px;
+    width: auto;
 }
 
 .progress-container {
-    width: 600px ;
+    width: 400px ;
+    max-width: 400px;
     flex-shrink: 0;
     height: 6px;
     background-color: var(--container-bar) ;
@@ -270,27 +276,325 @@
     box-shadow: 0 0 10px var(--js-color);
     width: 60%;
 }
+
+.nodejs-bar{
+    background-color: var(--nodejs-color) ;
+    box-shadow: 0 0 10px var(--nodejs-color) ;
+    width: 50%;
+}
 .pg-bar{
     background-color: var(--pg-color);
     box-shadow: 0 0 10px var(--pg-color);
     width: 70%;
 }
-.webStorm-bar{
-    background-color: var(--webStorm-color);
-    box-shadow: 0 0 10px var(--webStorm-color);
-    width: 70%;
-}
 
 .skill-tags{
     color: var(--secondary-text);
+    margin-left: 20px;
+    white-space: nowrap;
 }
 
-
+.code-comment{
+    color: var(--secondary-text);
+}
 .empty {
     width: 350px;
     flex-shrink: 0;
     height: 6px;
     border-radius: 10px;
     position: relative;
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: var(--empty-bar);
+}
+
+
+@media (max-width: 1100px) {
+    nav {
+        padding: 0 1.5rem;
+    }
+
+    .brand-name {
+        margin-right: 4rem;
+    }
+
+    .menu {
+        gap: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        position: relative;
+        flex-wrap: wrap;
+        height: auto;
+        padding: 1rem 1.5rem;
+        gap: 1rem;
+    }
+
+    .brand-name {
+        margin-right: 0;
+    }
+
+    .burger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 28px;
+        height: 20px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        margin-left: auto;
+    }
+
+    .burger span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: var(--secondary-text);
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+
+    .burger.open span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+    .burger.open span:nth-child(2) { opacity: 0; }
+    .burger.open span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+        padding: 0.5rem 0 0.5rem 0;
+        border-top: 1px solid var(--border-color);
+    }
+
+    .menu.open {
+        display: flex;
+    }
+
+    .theme-toggle {
+
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    #name {
+        font-size: 1.1rem;
+    }
+
+    .brand-name p:last-child {
+        display: none;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 0 7%;
+        margin-bottom: 6rem;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+        max-width: 100%;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .btn-primary {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-text p {
+        font-size: 0.95rem;
+    }
+}
+
+
+
+@media (max-width: 1100px) {
+    .projet-card {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .projet-img {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .projet-img img {
+        max-width: 100%;
+    }
+
+    .projet-description {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .projets-section h2 {
+        margin-left: 1.5rem;
+        font-size: 2.2rem;
+    }
+
+    .projet-card {
+        padding: 1.5rem;
+    }
+
+    .projet-techs {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .projets-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+
+    .projet-card {
+        padding: 1.2rem;
+        margin: 0 0.5rem;
+    }
+
+    .actu-swiper {
+        padding: 15px 0 50px 0;
+    }
+}
+
+
+@media (max-width: 1100px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .skills-section {
+        padding: 8rem 5%;
+    }
+
+    .progress-container {
+        width: 100%;
+        max-width: 100%;
+        flex: 1;
+    }
+
+    .empty {
+        width: 100%;
+        flex: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-section {
+        padding: 6rem 4%;
+    }
+
+    .skill-item {
+        padding-left: 15px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .tech-icons-container {
+        width: 130px;
+    }
+
+    .progress-container,
+    .empty {
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+    }
+
+    .skill-tags {
+        margin-left: 0;
+        width: 100%;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .stack-header {
+        font-size: 0.9rem;
+        padding: 15px 12px;
+    }
+
+    .stack-body {
+        padding: 15px 12px;
+    }
+
+    .skill-item {
+        padding-left: 8px;
+    }
+
+    .tech-icons-container {
+        width: 110px;
+    }
+
+    .code-keyword {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* =========================================================
+   6. TYPOGRAPHIE GLOBALE
+   ========================================================= */
+
+@media (max-width: 768px) {
+    :root {
+        --fs-h1: 2.2rem;
+        --fs-h2: 2rem;
+        --fs-h3: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --fs-h1: 1.8rem;
+        --fs-h2: 1.7rem;
+    }
+}
+
+
+/* =========================================================
+   7. LIGHTBOX
+   ========================================================= */
+
+@media (max-width: 768px) {
+    .close-lightbox {
+        top: 10px;
+        right: 20px;
+        font-size: 36px;
+    }
+
+    .prev-btn { left: 10px; }
+    .next-btn { right: 10px; }
+
+    .prev-btn,
+    .next-btn {
+        width: 44px;
+        height: 44px;
+        font-size: 1.2rem;
+    }
 }
