@@ -176,3 +176,16 @@ window.addEventListener('scroll', () => {
     });
 });
 
+const bars = document.querySelectorAll('.progress-bar');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.width = entry.target.dataset.width;
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.3 });
+
+bars.forEach(bar => observer.observe(bar));
+

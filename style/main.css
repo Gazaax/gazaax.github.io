@@ -10,3 +10,5 @@
 @import "components/cards.css";
 @import "components/forms.css";
 @import "page/home.css";
+@import "utilities/responsive.css";
+
