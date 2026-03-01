@@ -382,64 +382,68 @@
         </div>
     </section>
     <section class="contact-section" id="contact">
-        <h2>## Contact</h2>
-        <div class="contact-container">
-            <form action="" class="contact-form">
-                <div class="form-group">
-                    <label for="nom">Nom</label>
-                    <input id="nom" name="nom" required type="text">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input id="email" name="email" required type="email">
-                </div>
-                <div class="form-group">
-                    <label for="telephone">Téléphone</label>
-                    <input id="telephone" name="telephone" type="tel">
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                <button class="btn-submit" type="submit">Envoyer</button>
-            </form>
-            <div class="contact-info">
-                <div class="contact-info-item">
-                    <div class="contact-info-icon">
-                    <img src="./img/email.png" alt="Email">
+        <div class="contact-wrapper">
+            <h2>## Contact</h2>
+            <div class="contact-container">
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="form">
+                    <input type="hidden" name="access_key" value="91805154-249e-45ac-bbc8-81c4525bbc39">
+                    <div class="form-group">
+                        <label for="nom">Nom</label>
+                        <input id="nom" name="nom" required type="text">
                     </div>
-                    <div>
-                        <p class="contact-info-label">Email</p>
-                        <a href="mailto:quentintibopro@gmail.com">quentintibopro@gmail.com</a>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" required type="email">
                     </div>
-                </div>
-                <div class="contact-info-item">
-                    <div class="contact-info-icon">
-                        <img src="./img/phone.png" alt="Telephone">
+                    <div class="form-group">
+                        <label for="telephone">Téléphone</label>
+                        <input id="telephone" name="telephone" type="tel">
                     </div>
-                    <div>
-                        <p class="contact-info-label">Email</p>
-                        <a href="tel:+32491633466">+32491 63 34 66</a>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
                     </div>
-                </div>
-                <div class="contact-info-item">
-                    <div class="contact-info-icon">
-                        <img src="./img/like.png" alt="Like">
+                    <button class="btn-submit" type="submit">Envoyer</button>
+                </form>
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <img alt="Email" src="./img/email.png">
+                        </div>
+                        <div>
+                            <p class="contact-info-label">Email</p>
+                            <a href="mailto:quentintibopro@gmail.com">quentintibopro@gmail.com</a>
+                        </div>
                     </div>
-                    <div>
-                        <p class="contact-info-label">Suivez-moi</p>
-                        <div class="contact-socials">
-                            <a href="https://github.com/Gazaax" target="_blank">
-                                <img src="./img/github.png" alt="Github" class="github-icon">
-                            </a>
-                            <a href="https://linkedin.com/quentintibo" target="_blank">
-                                <img src="./img/linkedin.png" alt="Linkedin">
-                            </a>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <img alt="Telephone" src="./img/phone.png">
+                        </div>
+                        <div>
+                            <p class="contact-info-label">Email</p>
+                            <a href="tel:+32491633466">+32491 63 34 66</a>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <img alt="Like" src="./img/like.png">
+                        </div>
+                        <div>
+                            <p class="contact-info-label">Suivez-moi</p>
+                            <div class="contact-socials">
+                                <a href="https://github.com/Gazaax" target="_blank">
+                                    <img alt="Github" class="github-icon" src="./img/github.png">
+                                </a>
+                                <a href="https://linkedin.com/quentintibo" target="_blank">
+                                    <img alt="Linkedin" src="./img/linkedin.png">
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
 
     </section>
 
