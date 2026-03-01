@@ -15,9 +15,9 @@
 <header>
     <nav>
         <div class="brand">
-            <a href="#menu"><img alt="logo" id="logo" src="img/logo.png"></a>
+            <a href="#menu"><img alt="logo" class="logo" src="img/logo.png"></a>
             <div class="brand-name">
-                <p id="name">Quentin</p>
+                <p class="name">Quentin</p>
                 <p>WEB DEVELOPMENT</p>
             </div>
         </div>
@@ -65,7 +65,8 @@
                             <div class="projet-icon-section">
                                 <img alt="icon devbox" class="projet-icon" src="img/devbox.png">
                                 <img alt="icon api" class="projet-icon" src="img/api.png">
-                                <a href="https://github.com/Gazaax/PokeDex"><img alt="icon github" class="projet-icon github"
+                                <a href="https://github.com/Gazaax/PokeDex"><img alt="icon github"
+                                                                                 class="projet-icon github"
                                                                                  src="img/github.png"></a>
                             </div>
                             <h3>Pokédex</h3>
@@ -96,7 +97,8 @@
                         <div class="projet-info">
                             <div class="projet-icon-section">
                                 <img alt="icon devbox" class="projet-icon" src="img/devbox.png">
-                                <a href="https://github.com/Gazaax/mediCare"><img alt="icon github" class="projet-icon github"
+                                <a href="https://github.com/Gazaax/mediCare"><img alt="icon github"
+                                                                                  class="projet-icon github"
                                                                                   src="img/github.png"></a>
                             </div>
                             <h3>mediCare</h3>
@@ -161,7 +163,7 @@
 
         </div>
     </section>
-    <section class="experience">
+    <section class="experience" id="aPropos">
         <div class="timeline-container">
             <div class="timeline-progress-bar"></div>
             <ul class="timeline-list">
@@ -210,7 +212,7 @@
 
             <div class="stack-card">
                 <div class="stack-header">
-                    <span class="file-path">C: Gazaax / skills</span>
+                    <span>C: Gazaax / skills</span>
                 </div>
                 <div class="stack-body">
                     <div class="stack-line">
@@ -309,7 +311,7 @@
 
             <div class="stack-card">
                 <div class="stack-header">
-                    <span class="file-path">C: Gazaax / learning_path</span>
+                    <span class>C: Gazaax / learning_path</span>
                 </div>
                 <div class="stack-body">
                     <div class="stack-line">
@@ -319,7 +321,8 @@
                         <span class="code-comment">// -- Frontend --</span>
                         <div class="skill-item ">
                             <div class="tech-icons-container">
-                            <img alt="React" class="tech-icon" src="https://img.shields.io/badge/React-61DAFB?&logo=react&logoColor=white">
+                                <img alt="React" class="tech-icon"
+                                     src="https://img.shields.io/badge/React-61DAFB?&logo=react&logoColor=white">
                             </div>
                             <div class="progress-container empty">
                                 <div class="progress-bar"></div>
@@ -328,7 +331,8 @@
                         </div>
                         <div class="skill-item ">
                             <div class="tech-icons-container">
-                            <img alt="Vue" class="tech-icon" src="https://img.shields.io/badge/Vue-42D392?&logo=vuedotjs&logoColor=white">
+                                <img alt="Vue" class="tech-icon"
+                                     src="https://img.shields.io/badge/Vue-42D392?&logo=vuedotjs&logoColor=white">
                             </div>
                             <div class="progress-container empty">
                                 <div class="progress-bar "></div>
@@ -337,7 +341,8 @@
                         </div>
                         <div class="skill-item ">
                             <div class="tech-icons-container">
-                            <img alt="Angular" class="tech-icon" src="https://img.shields.io/badge/Angular-DD0031?&logo=angular&logoColor=white">
+                                <img alt="Angular" class="tech-icon"
+                                     src="https://img.shields.io/badge/Angular-DD0031?&logo=angular&logoColor=white">
                             </div>
                             <div class="progress-container empty">
                                 <div class="progress-bar"></div>
@@ -349,7 +354,8 @@
                         <span class="code-comment">// -- Backend --</span>
                         <div class="skill-item ">
                             <div class="tech-icons-container">
-                            <img alt="Nest" class="tech-icon" src="https://img.shields.io/badge/Nest-E0234E?&logo=nestjs&logoColor=white">
+                                <img alt="Nest" class="tech-icon"
+                                     src="https://img.shields.io/badge/Nest-E0234E?&logo=nestjs&logoColor=white">
                             </div>
                             <div class="progress-container empty">
                                 <div class="progress-bar"></div>
@@ -361,7 +367,8 @@
                         <span class="code-comment">// -- Base de donnée --</span>
                         <div class="skill-item ">
                             <div class="tech-icons-container">
-                            <img alt="Mongodb" class="tech-icon" src="https://img.shields.io/badge/MongoDB-47A248?&logo=mongodb&logoColor=white">
+                                <img alt="Mongodb" class="tech-icon"
+                                     src="https://img.shields.io/badge/MongoDB-47A248?&logo=mongodb&logoColor=white">
                             </div>
                             <div class="progress-container empty">
                                 <div class="progress-bar"></div>
@@ -373,6 +380,67 @@
                 </div>
             </div>
         </div>
+    </section>
+    <section class="contact-section" id="contact">
+        <h2>## Contact</h2>
+        <div class="contact-container">
+            <form action="" class="contact-form">
+                <div class="form-group">
+                    <label for="nom">Nom</label>
+                    <input id="nom" name="nom" required type="text">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" required type="email">
+                </div>
+                <div class="form-group">
+                    <label for="telephone">Téléphone</label>
+                    <input id="telephone" name="telephone" type="tel">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button class="btn-submit" type="submit">Envoyer</button>
+            </form>
+            <div class="contact-info">
+                <div class="contact-info-item">
+                    <div class="contact-info-icon">
+                    <img src="./img/email.png" alt="Email">
+                    </div>
+                    <div>
+                        <p class="contact-info-label">Email</p>
+                        <a href="mailto:quentintibopro@gmail.com">quentintibopro@gmail.com</a>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-info-icon">
+                        <img src="./img/phone.png" alt="Telephone">
+                    </div>
+                    <div>
+                        <p class="contact-info-label">Email</p>
+                        <a href="tel:+32491633466">+32491 63 34 66</a>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-info-icon">
+                        <img src="./img/like.png" alt="Like">
+                    </div>
+                    <div>
+                        <p class="contact-info-label">Suivez-moi</p>
+                        <div class="contact-socials">
+                            <a href="https://github.com/Gazaax" target="_blank">
+                                <img src="./img/github.png" alt="Github" class="github-icon">
+                            </a>
+                            <a href="https://linkedin.com/quentintibo" target="_blank">
+                                <img src="./img/linkedin.png" alt="Linkedin">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </section>
 
 

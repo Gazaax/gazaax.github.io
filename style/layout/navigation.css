@@ -21,13 +21,13 @@ nav {
     gap: 1.125rem;
     margin-right: 17.5rem;
 }
-#name {
+.name {
     font-size: 25px;
     font-weight: var(--fw-semibold);
     color: var(--primary-text);
 }
 
-#logo {
+.logo {
     width: 50px;
     height: 50px;
     border-radius: 50%;
