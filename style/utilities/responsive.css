@@ -10,7 +10,7 @@
    TABLET LANDSCAPE — 1100px
    ========================================================= */
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
 
     /* Navigation */
     nav {
@@ -65,6 +65,35 @@
         width: 100%;
         flex: 1;
     }
+
+    /*Contact*/
+    .contact-wrapper{
+        width: 90%;
+        max-width: 1200px;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        height:auto;
+    }
+    .contact-info{
+        width: 100%;
+        border-top: 1px solid var(--secondary-text);
+        flex-direction: row;
+        gap: 5rem;
+    }
+    .contact-info-item {
+        padding-top: 1rem;
+    }
+
+    .form-group,
+    .form-group input,
+    .form-group label,
+    .form-group textarea {
+        width: 80%;
+        margin: 0 auto;
+    }
+
 }
 
 

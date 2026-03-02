@@ -195,6 +195,7 @@ const submitBtn = form.querySelector('button[type="submit"]');
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
+    const formData = new FormData(form);
 
     const originalText = submitBtn.textContent;
 
