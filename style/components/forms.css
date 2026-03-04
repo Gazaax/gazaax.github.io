@@ -90,8 +90,11 @@
 }
 
 .contact-socials img {
-    filter: invert(0);
     transition: filter 0.3s ease, transform 0.2s ease;
+}
+.contact-socials a:hover img {
+    color: var(--accent-color);
+    transform: translateY(-2px);
 }
 
 .github-icon{
@@ -99,11 +102,8 @@
     width: 42px;
 }
 
-.contact-socials a:hover img {
-    transform: translateY(-2px);
-}
 
-body.light-mode .contact-socials img {
+body.light-mode .contact-socials img, body.light-mode .footer-right, body.light-mode .copyright {
     filter: invert(1);
 }
 
