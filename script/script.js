@@ -1,3 +1,19 @@
+// Menu burger
+const burger = document.getElementById('burger');
+const menu = document.getElementById('menu');
+
+burger.addEventListener('click', () => {
+    burger.classList.toggle('open');
+    menu.classList.toggle('open');
+});
+
+menu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        burger.classList.remove('open');
+        menu.classList.remove('open');
+    });
+});
+
 
 // Toggle switch
 const toggle = document.getElementById('themeToggle');

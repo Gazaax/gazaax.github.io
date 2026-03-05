@@ -18,9 +18,11 @@
     }
 
     .brand-name {
+        display: none;
+    }
+    .logo{
         margin-right: 4rem;
     }
-
     .menu {
         gap: 1.2rem;
     }
@@ -101,9 +103,8 @@
    TABLET PORTRAIT — 768px
    ========================================================= */
 
-@media (max-width: 768px) {
 
-    /* Navigation */
+@media (max-width: 768px) {
     nav {
         position: relative;
         flex-wrap: wrap;
@@ -112,26 +113,51 @@
         gap: 1rem;
     }
 
-    .brand-name {
-        margin-right: 0;
-    }
-
-    .menu {
+    .brand-name{
         display: none;
-        flex-direction: column;
-        width: 100%;
-        gap: 1rem;
-        padding: 0.5rem 0;
-        border-top: 1px solid var(--border-color);
     }
-
-    .menu.open {
+    .burger {
         display: flex;
+        order: 2;
     }
 
     .theme-toggle {
-        margin-left: auto;
+        margin-left: 0;
+        order: 3;
     }
+
+    .menu {
+        order: 4;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+        padding: 0;
+        max-height: 0;
+        margin-right: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease, padding 0.35s ease;
+        border-top: none;
+    }
+
+    .menu.open {
+        max-height: 300px;
+        padding: 0.8rem 0;
+        border-top: 1px solid var(--border-color);
+        text-align: center;
+    }
+
+    .burger.open span:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+    }
+    .burger.open span:nth-child(2) {
+        opacity: 0;
+        width: 0;
+    }
+    .burger.open span:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg);
+    }
+
 
     /* Hero */
     .hero-section {
