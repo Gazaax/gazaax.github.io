@@ -1,0 +1,57 @@
+.particle {
+    position: absolute;
+    background: #FF9F43;
+    border-radius: 50%;
+    opacity: 0;
+    animation: float-up linear infinite;
+}
+
+@keyframes float-up {
+    0%   { opacity: 0;   transform: translateY(0)      scale(1); }
+    10%  { opacity: 0.6; }
+    90%  { opacity: 0.2; }
+    100% { opacity: 0;   transform: translateY(-120vh) scale(0.3); }
+
+}
+
+.scroll-hint {
+    position: absolute;
+    bottom: 40px;
+    left: 260px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted-text);
+    animation: fade-up 0.7s 1.3s both;
+}
+
+.scroll-line {
+    width: 40px;
+    height: 1px;
+    background: var(--accent-orange);
+    position: relative;
+    overflow: hidden;
+}
+
+.scroll-line::after {
+    content: '';
+    position: absolute;
+    left: -40px;
+    top: 0;
+    width: 40px;
+    height: 100%;
+    background: white;
+    animation: slide-right 1.5s ease-in-out infinite;
+}
+
+@keyframes slide-right {
+    from {
+        left: -40px;
+    }
+    to {
+        left: 40px;
+    }
+}

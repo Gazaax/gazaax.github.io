@@ -2,19 +2,22 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style/main.css">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600&display=swap"
+          rel="stylesheet">
+    <link href="style/main.css" rel="stylesheet">
+    <script src="script/personnage.js"></script>
     <title>Mon portfolio</title>
 </head>
 <body>
-<div id="particles"></div>
 <div id="cursor"></div>
 <div id="cursor-ring"></div>
+<div class="bg-ambiant" ></div>
+<div id="particles"></div>
 <header>
     <nav>
         <div class="brand">
-            <a href="#menu"><img src="img/logo.png" alt="logo" class="logo"></a>
+            <a href="#menu"><img alt="logo" class="logo" src="img/logo.png"></a>
             <div class="brand-name">
                 <p>Quentin</p>
                 <p>WEB DEVELOPPEMENT</p>
@@ -28,7 +31,82 @@
         </ul>
     </nav>
 </header>
+<main>
+    <section id="hero">
+        <div class="hero-content">
+            <p class="hero-eyebrow">◈ Disponible pour de nouvelles opportunités</p>
+            <h1 class="hero-title">Quentin <span>.</span></h1>
+            <p class="hero-sub">Front-End <span class="hero-sep">|</span>Fullstack</p>
+            <p class="hero-desc">Un bon projet ne repose pas seulement sur sa technique, mais
+                sur le soin apporté aux détails. Je m'efforce de construire des architectures solides sans jamais
+                oublier l'humain qui se trouve devant l'écran.</p>
+            <div class="hero-cta">
+                <button class="btn-primary">Voir mon github</button>
+                <button class="btn-ghost">Me contacter</button>
+            </div>
+        </div>
+        <div class="hero-visual" id="heroVisual">
+            <div class="hero-glow-orb"></div>
+            <svg id="hero-char" viewBox="0 0 340 480" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="170" cy="480" rx="130" ry="30" fill="rgba(0,0,0,0.3)"/>
+                <path d="M90 310 Q80 380 75 480 L265 480 Q260 380 250 310 Q220 295 170 292 Q120 295 90 310Z" fill="#1a2010"/>
+                <rect x="140" y="380" width="60" height="40" rx="8" fill="rgba(0,0,0,0.2)"/>
+                <rect x="155" y="270" width="30" height="40" fill="#c8956c"/>
+                <ellipse cx="170" cy="240" rx="60" ry="65" fill="#c8956c"/>
+                <path d="M110 210 Q115 160 150 150 Q170 145 185 148 Q210 155 225 175 Q230 190 228 210" fill="#2a1a0a"/>
+                <path d="M110 210 Q105 195 108 175 Q118 155 140 150" fill="#2a1a0a"/>
+                <path d="M228 210 Q235 195 230 170 Q220 150 200 148" fill="#2a1a0a"/>
+                <path d="M118 200 Q125 175 145 168 Q160 163 175 165 Q190 163 205 170 Q220 178 222 195" fill="#2a1a0a"/>
+                <ellipse cx="112" cy="248" rx="10" ry="13" fill="#c8956c"/>
+                <ellipse cx="228" cy="248" rx="10" ry="13" fill="#c8956c"/>
+                <path d="M112 225 Q170 195 228 225" stroke="#FF9F43" stroke-width="8" fill="none" stroke-linecap="round"/>
+                <rect x="98" y="225" width="26" height="34" rx="8" fill="#FF9F43"/>
+                <rect x="101" y="229" width="20" height="26" rx="6" fill="#cc7a22"/>
+                <rect x="216" y="225" width="26" height="34" rx="8" fill="#FF9F43"/>
+                <rect x="219" y="229" width="20" height="26" rx="6" fill="#cc7a22"/>
+                <rect x="128" y="245" width="38" height="26" rx="7" stroke="#3a3a3a" stroke-width="2.5" fill="rgba(180,210,255,0.15)"/>
+                <rect x="174" y="245" width="38" height="26" rx="7" stroke="#3a3a3a" stroke-width="2.5" fill="rgba(180,210,255,0.15)"/>
+                <line x1="166" y1="258" x2="174" y2="258" stroke="#3a3a3a" stroke-width="2"/>
+                <line x1="128" y1="258" x2="118" y2="255" stroke="#3a3a3a" stroke-width="2"/>
+                <line x1="212" y1="258" x2="222" y2="255" stroke="#3a3a3a" stroke-width="2"/>
+                <ellipse cx="147" cy="258" rx="8" ry="6" fill="#2a1a0a"/>
+                <ellipse cx="193" cy="258" rx="8" ry="6" fill="#2a1a0a"/>
+                <circle cx="149" cy="256" r="2" fill="white"/>
+                <circle cx="195" cy="256" r="2" fill="white"/>
+                <path d="M158 282 Q170 287 182 282" stroke="#a87050" stroke-width="2" fill="none" stroke-linecap="round"/>
+                <path d="M90 315 Q60 340 55 390 Q60 395 70 390 Q80 345 105 325Z" fill="#1a2010"/>
+                <path d="M250 315 Q280 340 285 390 Q280 395 270 390 Q260 345 235 325Z" fill="#1a2010"/>
+                <ellipse cx="62" cy="393" rx="14" ry="10" fill="#c8956c"/>
+                <ellipse cx="278" cy="393" rx="14" ry="10" fill="#c8956c"/>
+                <ellipse cx="165" cy="268" rx="45" ry="35" fill="rgba(100,160,255,0.04)"/>
+            </svg>
 
+            <svg style="position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);width:280px;opacity:0.7" viewBox="0 0 280 80" xmlns="http://www.w3.org/2000/svg">
+                <rect x="10" y="0" width="260" height="55" rx="6" fill="#1a1a20" stroke="rgba(255,159,67,0.2)" stroke-width="1"/>
+                <rect x="15" y="5" width="250" height="45" rx="4" fill="#0e0e14"/>
+                <rect x="20" y="10" width="80" height="5" rx="2" fill="rgba(255,159,67,0.4)"/>
+                <rect x="20" y="19" width="60" height="3" rx="1.5" fill="rgba(255,255,255,0.1)"/>
+                <rect x="20" y="26" width="70" height="3" rx="1.5" fill="rgba(255,255,255,0.1)"/>
+                <rect x="20" y="33" width="55" height="3" rx="1.5" fill="rgba(255,255,255,0.07)"/>
+                <rect x="115" y="10" width="140" height="38" rx="3" fill="rgba(255,159,67,0.05)" stroke="rgba(255,159,67,0.1)" stroke-width="0.5"/>
+                <rect x="120" y="14" width="50" height="3" rx="1.5" fill="rgba(100,200,100,0.3)"/>
+                <rect x="128" y="20" width="80" height="3" rx="1.5" fill="rgba(100,150,255,0.3)"/>
+                <rect x="128" y="26" width="65" height="3" rx="1.5" fill="rgba(255,200,100,0.25)"/>
+                <rect x="120" y="32" width="40" height="3" rx="1.5" fill="rgba(100,200,100,0.3)"/>
+                <rect x="125" y="55" width="30" height="14" rx="2" fill="#141418"/>
+                <rect x="100" y="67" width="80" height="8" rx="4" fill="#1a1a20"/>
+            </svg>
+
+            <div class="chess-deco c1">♛</div>
+            <div class="chess-deco c2">♞</div>
+        </div>
+
+        <div class="scroll-hint">
+            <div class="scroll-line"></div>
+            Scroll pour explorer
+        </div>
+    </section>
+</main>
 <script src="script/cursor.js"></script>
 <script src="script/particles.js"></script>
 </body>
