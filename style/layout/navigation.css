@@ -1,0 +1,70 @@
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: var(--space-md) var(--space-lg);
+    margin: 0 auto;
+    border-bottom:  1px solid var(--border);
+    background: rgba(16, 16, 18, 0.7);
+    backdrop-filter: blur(16px);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.brand-name p:first-child {
+    font-weight: var(--fw-black);
+    color: var(--primary-text);
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.brand-name p:last-child {
+    font-size: var(--fs-label);
+    color: var(--accent-orange);
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    gap: var(--space-lg);
+}
+
+nav ul li a {
+    position: relative;
+    font-weight: var(--fw-semi-bold);
+    color: var(--muted-text);
+    transition: 0.4s;
+}
+nav ul li a::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px ;
+    bottom: -4px;
+    left: 50%;
+    background-color: var(--accent-orange) ;
+    transition: all 0.4s;
+}
+
+nav ul li a:hover::before {
+    width: 100%;
+    left: 0;
+}
+nav ul li a:hover {
+    color: var(--accent-orange);
+}
