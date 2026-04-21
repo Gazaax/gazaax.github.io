@@ -1,34 +1,24 @@
 h1, h2, h3 {
+    font-family: var(--font-head);
     color: var(--primary-text);
-    line-height: var(--lh-title);
 }
 
 h1 {
     font-size: var(--fs-h1);
-    font-weight: var(--fw-bold);
-    margin-bottom: var(--space-md);
-    max-width: 700px;
-    text-align: center;
+    font-weight: var(--fw-black);
 }
 
 h2 {
     font-size: var(--fs-h2);
-    font-weight: var(--fw-semibold);
-    margin-bottom: 3rem;
+    font-weight: var(--fw-black);
 }
 
 h3 {
     font-size: var(--fs-h3);
-    font-weight: var(--fw-semibold);
-    margin-bottom: 12px;
+    font-weight: var(--fw-bold);
 }
 
-p {
-    font-size: var(--fs-body);
+p{
     color: var(--secondary-text);
-    line-height: var(--lh-base);
-}
-
-.projet-description {
-    max-width: 90%;
+    font-size: var(--fs-corps);
 }

@@ -2,8 +2,10 @@
     --background-color: #101012;
     --background-glow: #1a0e05;
     --background-glow-secondary: #301A0A;
+
     --surface-card: #18181c;
     --surface-input: #1e1e24;
+
     --accent-orange: #FF9F43;
     --accent-dim: rgba(255, 159, 67, 0.12);
     --accent-mid: rgba(255, 159, 67, 0.35);
@@ -34,6 +36,9 @@
     --space-lg: 1.5rem;   /* 24px - Entre deux paragraphes */
     --space-xl: 3rem;     /* 48px - Entre les sections (Margin-bottom) */
     --space-2xl: 5rem;    /* 80px - Padding haut/bas des grandes sections */
-    
+
     --card-radius: 12px;
+
+    --font-head: 'Montserrat', sans-serif;
+    --font-body: 'Poppins', sans-serif;
 }
