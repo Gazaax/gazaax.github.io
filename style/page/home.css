@@ -1,18 +1,14 @@
 .bg-ambient {
-    position: fixed;
-    inset: 0 ;
-    z-index: 1000;
-    background: radial-gradient(ellipse 60% 50% at 15% 40%, rgba(48, 26, 10, 0.9) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 35% at 85% 70%, rgba(30, 14, 4, 0.6) 0%, transparent 60%);
+    position: fixed; inset: 0; z-index: 0;
+    background:
+            radial-gradient(ellipse 60% 50% at 15% 40%, rgba(48,26,10,0.9) 0%, transparent 70%),
+            radial-gradient(ellipse 40% 35% at 85% 70%, rgba(30,14,4,0.6) 0%, transparent 60%);
     pointer-events: none;
 }
 
 #hero {
-    width: 1500px;
     min-height: 100vh;
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
+    display: flex; align-items: center;
     padding: 100px 80px 60px;
     gap: 0;
 }
@@ -22,7 +18,7 @@
     max-width: 520px;
 }
 
-.hero-eyebrow {
+.hero-eyebrow, .skills-eyebrow {
     font-family: var(--font-head);
     font-size: 0.7rem;
     font-weight: 600;
@@ -44,7 +40,7 @@
     animation: fade-up 0.7s 0.5s forwards;
 }
 
-.hero-title span {
+.hero-title span, .skills-title span {
     color: var(--accent-orange);
 }
 
@@ -205,4 +201,15 @@
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+
+/* SKILLS */
+.skills-title{
+    font-family: var(--font-head);
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-black);
+    line-height: 0.95;
+    color: var(--primary-text);
+    margin-bottom: 2rem;
 }
