@@ -45,7 +45,7 @@ section {
     animation: fade-up 0.7s 0.5s forwards;
 }
 
-.hero-title span, .skills-title span {
+.hero-title span, .skills-title span, .contact-headline span {
     color: var(--accent-orange);
 }
 
