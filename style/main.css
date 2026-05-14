@@ -1,6 +1,6 @@
 @import "base/variables.css";
 @import "components/cursor.css";
-@import "../../PortfolioV2/style/base/reset.css";
+@import "base/reset.css";
 @import "base/typography.css";
 @import "utilities/animations.css";
 @import "layout/header.css";
