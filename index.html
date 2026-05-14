@@ -7,6 +7,7 @@
           rel="stylesheet">
     <link href="img/logo.png" rel="icon">
     <link href="style/main.css" rel="stylesheet">
+    <script src="script/form.js" defer></script>
     <title>Mon portfolio</title>
 </head>
 <body>
@@ -311,7 +312,8 @@
             <h2 class="skills-title">PRÊT À <span>COLLABORER ?</span></h2>
         </div>
         <div class="contact-grid">
-            <form class="contact-form">
+            <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" id="form">
+                <input type="hidden" name="access_key" value="91805154-249e-45ac-bbc8-81c4525bbc39">
                 <div class="form-group">
                     <label class="form-label" for="nom">Votre nom</label>
                     <input class="form-input" id="nom" name="nom" placeholder="John Doe" required type="text">
