@@ -11,3 +11,22 @@ document.addEventListener('mousemove', (e) => {
 
     heroChar.style.transform = `translateX(${xRel * 18}px) translateY(${yRel * 10}px)`;
 });
+
+// Mobile menu toggle
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.getElementById('nav-links');
+
+if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        menuToggle.classList.toggle('open');
+    });
+
+    // Close menu when a link is clicked (for single-page navigation)
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            menuToggle.classList.remove('open');
+        });
+    });
+}

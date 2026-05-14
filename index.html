@@ -5,7 +5,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600&display=swap"
           rel="stylesheet">
-    <link rel="icon" href="img/logo.png">
+    <link href="img/logo.png" rel="icon">
     <link href="style/main.css" rel="stylesheet">
     <title>Mon portfolio</title>
 </head>
@@ -23,7 +23,10 @@
                 <p>WEB DEVELOPPEMENT</p>
             </div>
         </div>
-        <ul>
+        <div class="menu-toggle">
+            <div class="hamburger"></div>
+        </div>
+        <ul id="nav-links">
             <li><a href="#menu">HOME</a></li>
             <li><a href="#projet">PROJET</a></li>
             <li><a href="#skills">SKILLS</a></li>
@@ -48,61 +51,61 @@
         <div class="hero-visual" id="heroVisual">
             <div class="hero-glow-orb"></div>
             <svg id="hero-char" viewBox="0 0 340 480" xmlns="http://www.w3.org/2000/svg">
-                <ellipse cx="170" cy="480" rx="130" ry="30" fill="rgba(0,0,0,0.3)"/>
+                <ellipse cx="170" cy="480" fill="rgba(0,0,0,0.3)" rx="130" ry="30"/>
                 <path d="M90 310 Q80 380 75 480 L265 480 Q260 380 250 310 Q220 295 170 292 Q120 295 90 310Z"
                       fill="#1a2010"/>
-                <rect x="140" y="380" width="60" height="40" rx="8" fill="rgba(0,0,0,0.2)"/>
-                <rect x="155" y="270" width="30" height="40" fill="#c8956c"/>
-                <ellipse cx="170" cy="240" rx="60" ry="65" fill="#c8956c"/>
+                <rect fill="rgba(0,0,0,0.2)" height="40" rx="8" width="60" x="140" y="380"/>
+                <rect fill="#c8956c" height="40" width="30" x="155" y="270"/>
+                <ellipse cx="170" cy="240" fill="#c8956c" rx="60" ry="65"/>
                 <path d="M110 210 Q115 160 150 150 Q170 145 185 148 Q210 155 225 175 Q230 190 228 210" fill="#2a1a0a"/>
                 <path d="M110 210 Q105 195 108 175 Q118 155 140 150" fill="#2a1a0a"/>
                 <path d="M228 210 Q235 195 230 170 Q220 150 200 148" fill="#2a1a0a"/>
                 <path d="M118 200 Q125 175 145 168 Q160 163 175 165 Q190 163 205 170 Q220 178 222 195" fill="#2a1a0a"/>
-                <ellipse cx="112" cy="248" rx="10" ry="13" fill="#c8956c"/>
-                <ellipse cx="228" cy="248" rx="10" ry="13" fill="#c8956c"/>
-                <path d="M112 225 Q170 195 228 225" stroke="#FF9F43" stroke-width="8" fill="none"
-                      stroke-linecap="round"/>
-                <rect x="98" y="225" width="26" height="34" rx="8" fill="#FF9F43"/>
-                <rect x="101" y="229" width="20" height="26" rx="6" fill="#cc7a22"/>
-                <rect x="216" y="225" width="26" height="34" rx="8" fill="#FF9F43"/>
-                <rect x="219" y="229" width="20" height="26" rx="6" fill="#cc7a22"/>
-                <rect x="128" y="245" width="38" height="26" rx="7" stroke="#3a3a3a" stroke-width="2.5"
-                      fill="rgba(180,210,255,0.15)"/>
-                <rect x="174" y="245" width="38" height="26" rx="7" stroke="#3a3a3a" stroke-width="2.5"
-                      fill="rgba(180,210,255,0.15)"/>
-                <line x1="166" y1="258" x2="174" y2="258" stroke="#3a3a3a" stroke-width="2"/>
-                <line x1="128" y1="258" x2="118" y2="255" stroke="#3a3a3a" stroke-width="2"/>
-                <line x1="212" y1="258" x2="222" y2="255" stroke="#3a3a3a" stroke-width="2"/>
-                <ellipse cx="147" cy="258" rx="8" ry="6" fill="#2a1a0a"/>
-                <ellipse cx="193" cy="258" rx="8" ry="6" fill="#2a1a0a"/>
-                <circle cx="149" cy="256" r="2" fill="white"/>
-                <circle cx="195" cy="256" r="2" fill="white"/>
-                <path d="M158 282 Q170 287 182 282" stroke="#a87050" stroke-width="2" fill="none"
-                      stroke-linecap="round"/>
+                <ellipse cx="112" cy="248" fill="#c8956c" rx="10" ry="13"/>
+                <ellipse cx="228" cy="248" fill="#c8956c" rx="10" ry="13"/>
+                <path d="M112 225 Q170 195 228 225" fill="none" stroke="#FF9F43" stroke-linecap="round"
+                      stroke-width="8"/>
+                <rect fill="#FF9F43" height="34" rx="8" width="26" x="98" y="225"/>
+                <rect fill="#cc7a22" height="26" rx="6" width="20" x="101" y="229"/>
+                <rect fill="#FF9F43" height="34" rx="8" width="26" x="216" y="225"/>
+                <rect fill="#cc7a22" height="26" rx="6" width="20" x="219" y="229"/>
+                <rect fill="rgba(180,210,255,0.15)" height="26" rx="7" stroke="#3a3a3a" stroke-width="2.5" width="38" x="128"
+                      y="245"/>
+                <rect fill="rgba(180,210,255,0.15)" height="26" rx="7" stroke="#3a3a3a" stroke-width="2.5" width="38" x="174"
+                      y="245"/>
+                <line stroke="#3a3a3a" stroke-width="2" x1="166" x2="174" y1="258" y2="258"/>
+                <line stroke="#3a3a3a" stroke-width="2" x1="128" x2="118" y1="258" y2="255"/>
+                <line stroke="#3a3a3a" stroke-width="2" x1="212" x2="222" y1="258" y2="255"/>
+                <ellipse cx="147" cy="258" fill="#2a1a0a" rx="8" ry="6"/>
+                <ellipse cx="193" cy="258" fill="#2a1a0a" rx="8" ry="6"/>
+                <circle cx="149" cy="256" fill="white" r="2"/>
+                <circle cx="195" cy="256" fill="white" r="2"/>
+                <path d="M158 282 Q170 287 182 282" fill="none" stroke="#a87050" stroke-linecap="round"
+                      stroke-width="2"/>
                 <path d="M90 315 Q60 340 55 390 Q60 395 70 390 Q80 345 105 325Z" fill="#1a2010"/>
                 <path d="M250 315 Q280 340 285 390 Q280 395 270 390 Q260 345 235 325Z" fill="#1a2010"/>
-                <ellipse cx="62" cy="393" rx="14" ry="10" fill="#c8956c"/>
-                <ellipse cx="278" cy="393" rx="14" ry="10" fill="#c8956c"/>
-                <ellipse cx="165" cy="268" rx="45" ry="35" fill="rgba(100,160,255,0.04)"/>
+                <ellipse cx="62" cy="393" fill="#c8956c" rx="14" ry="10"/>
+                <ellipse cx="278" cy="393" fill="#c8956c" rx="14" ry="10"/>
+                <ellipse cx="165" cy="268" fill="rgba(100,160,255,0.04)" rx="45" ry="35"/>
             </svg>
 
             <svg style="position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);width:280px;opacity:0.7"
                  viewBox="0 0 280 80" xmlns="http://www.w3.org/2000/svg">
-                <rect x="10" y="0" width="260" height="55" rx="6" fill="#1a1a20" stroke="rgba(255,159,67,0.2)"
-                      stroke-width="1"/>
-                <rect x="15" y="5" width="250" height="45" rx="4" fill="#0e0e14"/>
-                <rect x="20" y="10" width="80" height="5" rx="2" fill="rgba(255,159,67,0.4)"/>
-                <rect x="20" y="19" width="60" height="3" rx="1.5" fill="rgba(255,255,255,0.1)"/>
-                <rect x="20" y="26" width="70" height="3" rx="1.5" fill="rgba(255,255,255,0.1)"/>
-                <rect x="20" y="33" width="55" height="3" rx="1.5" fill="rgba(255,255,255,0.07)"/>
-                <rect x="115" y="10" width="140" height="38" rx="3" fill="rgba(255,159,67,0.05)"
-                      stroke="rgba(255,159,67,0.1)" stroke-width="0.5"/>
-                <rect x="120" y="14" width="50" height="3" rx="1.5" fill="rgba(100,200,100,0.3)"/>
-                <rect x="128" y="20" width="80" height="3" rx="1.5" fill="rgba(100,150,255,0.3)"/>
-                <rect x="128" y="26" width="65" height="3" rx="1.5" fill="rgba(255,200,100,0.25)"/>
-                <rect x="120" y="32" width="40" height="3" rx="1.5" fill="rgba(100,200,100,0.3)"/>
-                <rect x="125" y="55" width="30" height="14" rx="2" fill="#141418"/>
-                <rect x="100" y="67" width="80" height="8" rx="4" fill="#1a1a20"/>
+                <rect fill="#1a1a20" height="55" rx="6" stroke="rgba(255,159,67,0.2)" stroke-width="1" width="260" x="10"
+                      y="0"/>
+                <rect fill="#0e0e14" height="45" rx="4" width="250" x="15" y="5"/>
+                <rect fill="rgba(255,159,67,0.4)" height="5" rx="2" width="80" x="20" y="10"/>
+                <rect fill="rgba(255,255,255,0.1)" height="3" rx="1.5" width="60" x="20" y="19"/>
+                <rect fill="rgba(255,255,255,0.1)" height="3" rx="1.5" width="70" x="20" y="26"/>
+                <rect fill="rgba(255,255,255,0.07)" height="3" rx="1.5" width="55" x="20" y="33"/>
+                <rect fill="rgba(255,159,67,0.05)" height="38" rx="3" stroke="rgba(255,159,67,0.1)" stroke-width="0.5" width="140"
+                      x="115" y="10"/>
+                <rect fill="rgba(100,200,100,0.3)" height="3" rx="1.5" width="50" x="120" y="14"/>
+                <rect fill="rgba(100,150,255,0.3)" height="3" rx="1.5" width="80" x="128" y="20"/>
+                <rect fill="rgba(255,200,100,0.25)" height="3" rx="1.5" width="65" x="128" y="26"/>
+                <rect fill="rgba(100,200,100,0.3)" height="3" rx="1.5" width="40" x="120" y="32"/>
+                <rect fill="#141418" height="14" rx="2" width="30" x="125" y="55"/>
+                <rect fill="#1a1a20" height="8" rx="4" width="80" x="100" y="67"/>
             </svg>
 
             <div class="chess-deco c1">♛</div>
@@ -118,7 +121,6 @@
     <section id="about">
         <div class="about-inner">
 
-            <!-- GAUCHE : texte -->
             <div class="about-content">
                 <p class="section-tag">◈ À propos</p>
                 <h2>QUI SUIS-JE <span>?</span></h2>
@@ -152,7 +154,6 @@
                 </div>
             </div>
 
-            <!-- DROITE : timeline -->
             <div class="about-timeline">
                 <p class="section-tag">Mon parcours</p>
 
@@ -217,29 +218,29 @@
                     <ul class="skill-list">
                         <li class="skill-item">
                             <div class="skill-icon">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
-                                     alt="Angular">
+                                <img alt="Angular"
+                                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg">
                             </div>
                             <span>Angular</span>
                         </li>
                         <li class="skill-item">
                             <div class="skill-icon">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                                     alt="JavaScript">
+                                <img alt="JavaScript"
+                                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
                             </div>
                             <span>JavaScript ES6+</span>
                         </li>
                         <li class="skill-item">
                             <div class="skill-icon">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-                                     alt="HTML5">
+                                <img alt="HTML5"
+                                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
                             </div>
                             <span>HTML5</span>
                         </li>
                         <li class="skill-item">
                             <div class="skill-icon">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
-                                     alt="SASS">
+                                <img alt="SASS"
+                                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg">
                             </div>
                             <span>CSS / SASS</span>
                         </li>
@@ -251,22 +252,22 @@
                     <ul class="skill-list">
                         <li class="skill-item">
                             <div class="skill-icon">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-                                     alt="Node.js">
+                                <img alt="Node.js"
+                                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg">
                             </div>
                             <span>Node.js</span>
                         </li>
                         <li class="skill-item">
                             <div class="skill-icon">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
-                                     alt="PHP">
+                                <img alt="PHP"
+                                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg">
                             </div>
                             <span>PHP</span>
                         </li>
                         <li class="skill-item">
                             <div class="skill-icon">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-                                     alt="PostgreSQL">
+                                <img alt="PostgreSQL"
+                                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg">
                             </div>
                             <span>PostgreSQL</span>
                         </li>
@@ -278,22 +279,22 @@
                     <ul class="skill-list">
                         <li class="skill-item">
                             <div class="skill-icon">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-                                     alt="Git">
+                                <img alt="Git"
+                                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg">
                             </div>
                             <span>Git</span>
                         </li>
                         <li class="skill-item">
                             <div class="skill-icon">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
-                                     alt="Docker">
+                                <img alt="Docker"
+                                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg">
                             </div>
                             <span>Docker</span>
                         </li>
                         <li class="skill-item">
                             <div class="skill-icon">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
-                                     alt="Figma">
+                                <img alt="Figma"
+                                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg">
                             </div>
                             <span>Figma</span>
                         </li>
@@ -312,57 +313,62 @@
         <div class="contact-grid">
             <form class="contact-form">
                 <div class="form-group">
-                    <label for="nom" class="form-label">Votre nom</label>
-                    <input type="text" class="form-input" id="nom" name="nom" placeholder="John Doe" required>
+                    <label class="form-label" for="nom">Votre nom</label>
+                    <input class="form-input" id="nom" name="nom" placeholder="John Doe" required type="text">
                 </div>
                 <div class="form-group">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-input" id="email" name="email" placeholder="john.doe@exemple.com"
-                           required>
+                    <label class="form-label" for="email">Email</label>
+                    <input class="form-input" id="email" name="email" placeholder="john.doe@exemple.com" required
+                           type="email">
                 </div>
                 <div class="form-group">
-                    <label for="subject" class="form-label">Objet</label>
-                    <input type="text" class="form-input" id="subject" name="subject"
-                           placeholder="Sujet de votre message" required>
+                    <label class="form-label" for="subject">Objet</label>
+                    <input class="form-input" id="subject" name="subject" placeholder="Sujet de votre message"
+                           required type="text">
                 </div>
                 <div class="form-group">
-                    <label for="message" class="form-label">Message</label>
-                    <textarea class="form-input" id="message" name="message" rows="5"
-                              placeholder="Comment puis-je vous aider ?"
-                              required></textarea>
+                    <label class="form-label" for="message">Message</label>
+                    <textarea class="form-input" id="message" name="message" placeholder="Comment puis-je vous aider ?"
+                              required
+                              rows="5"></textarea>
                 </div>
-                <button type="submit" class="btn-primary">Envoyer le message</button>
+                <button class="btn-primary" type="submit">Envoyer le message</button>
             </form>
             <div>
                 <p class="contact-headline">Toujours partant pour discuter de projets ambitieux ou d'opportunités
                     fullstack. <span>Construisons quelque chose d'impactant ensemble.</span></p>
-                <span class="divider"></span>
-                <div class="social-icons">
-                    <a href="#" class="social-link">
+                <div class="divider"></div>
+                <div class="social-links">
+                    <a class="social-link" href="https://github.com/Gazaax">
                         <span class="icon">⌥</span>
                         <div>
-                            <p>GitHub</p>
-                            <p>github.com/gazaax</p>
+                            <p class="social-link-title">GitHub</p>
+                            <p class="social-link-subtitle">github.com/Gazaax</p>
                         </div>
                     </a>
-                    <a href="#" class="social-link">
+                    <a class="social-link" href="https://www.linkedin.com/in/quentintibo/">
                         <span class="icon">in</span>
                         <div>
-                            <p>LinkedIn</p>
-                            <p>linkedin.com/in/gazaax</p>
+                            <p class="social-link-title">LinkedIn</p>
+                            <p class="social-link-subtitle">linkedin.com/in/quentintibo</p>
                         </div>
                     </a>
-                    <a href="mailto:contact@gazaax.dev" class="social-link">
+                    <a class="social-link" href="mailto:quentintibopro@gmail.com">
                         <span class="icon">✉</span>
                         <div>
-                            <p>Email Direct</p>
-                            <p>contact@gazaax.dev</p>
+                            <p class="social-link-title">Email Direct</p>
+                            <p class="social-link-subtitle">quentintibopro@gmail.com</p>
                         </div>
                     </a>
                 </div>
             </div>
         </div>
     </section>
+    <footer>
+        <a href="#menu"><img alt="logo" class="logo" src="img/logo.png"></a>
+        <div class="footer-copy">© 2026 Quentin Tibo — Fullstack Developer</div>
+        <div class="footer-credits">Fait avec ♥ & ☕</div>
+    </footer>
 </main>
 
 <script src="script/cursor.js"></script>

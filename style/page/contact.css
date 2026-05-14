@@ -1,4 +1,5 @@
 #contact {
+    position: relative;
     background: var(--surface-card);
 }
 
@@ -32,7 +33,7 @@
 .form-input, .form-textarea {
     background: var(--surface-input);
     border: 1px solid var(--border);
-    border-radius: 8px;
+    border-radius: var(--card-radius);
     padding: 14px 16px;
     color: var(--primary-text);
     font-family: var(--font-body);
@@ -50,4 +51,60 @@
 .form-textarea {
     resize: vertical;
     min-height: 120px;
+}
+
+.divider{
+    background: var(--accent-dim);
+    height: 1px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.contact-headline {
+    font-family: var(--font-head);
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-bold);
+    line-height: 1.6;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: 14px 18px;
+    background: var(--surface-input);
+    border: 1px solid var(--border);
+    border-radius: var(--card-radius);
+    color: var(--primary-text);
+    font-size: var(--fs-corps);
+    transition: all 0.25s;
+}
+
+.social-link:hover {
+    border-color: var(--accent-orange);
+    color: var(--accent-orange);
+    transform: translateX(4px);
+}
+
+.social-link .icon {
+    font-size: 1.2rem;
+    width: 24px;
+    text-align: center;
+}
+
+.social-link-title {
+    font-size: 1.2rem;
+    font-weight: var(--fw-semi-bold);
+    color: var(--primary-text);
+}
+
+.social-link-subtitle {
+    color: var(--muted-text);
 }

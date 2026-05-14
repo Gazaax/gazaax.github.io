@@ -1,15 +1,10 @@
 #skills {
     position: relative;
     z-index: 1;
-    padding: var(--space-2xl) 0;
+    padding: 100px 80px 60px;
 }
 
-.skills-inner {
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 80px;
-}
+
 
 .section-tag{
     color: var(--accent-orange);
@@ -24,7 +19,6 @@
     margin-bottom: 2rem;
 }
 
-/* ── GRILLE DES 3 GROUPES ───────────────── */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -32,7 +26,6 @@
     margin-top: 56px;
 }
 
-/* ── CARD DE GROUPE ─────────────────────── */
 .skill-group {
     background: var(--surface-card);
     border: 1px solid var(--border);
@@ -62,7 +55,6 @@
     opacity: 1;
 }
 
-/* ── TITRE DU GROUPE ────────────────────── */
 .skill-group-title {
     font-family: var(--font-head);
     font-size: var(--fs-section-tag);
@@ -75,14 +67,12 @@
     border-bottom: 1px solid var(--border);
 }
 
-/* ── LISTE DES SKILLS ───────────────────── */
 .skill-list {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-/* ── ITEM INDIVIDUEL ────────────────────── */
 .skill-item {
     display: flex;
     align-items: center;
@@ -95,7 +85,7 @@
 
 .skill-item:hover {
     background: var(--accent-dim);
-    transform: translateX(6px); /* glisse légèrement à droite */
+    transform: translateX(6px);
 }
 
 .skill-icon {
@@ -111,7 +101,6 @@
     width: 28px;
     height: 28px;
     object-fit: contain;
-    /* filtre pour harmoniser les icônes trop claires sur fond sombre */
     filter: drop-shadow(0 0 6px rgba(255, 159, 67, 0.15));
     transition: filter 0.2s ease, transform 0.2s ease;
 }
@@ -134,30 +123,3 @@
     color: var(--primary-text);
 }
 
-/* ── RESPONSIVE ─────────────────────────── */
-@media (max-width: 1024px) {
-    .skills-inner {
-        padding: 0 48px;
-    }
-}
-
-@media (max-width: 768px) {
-    .skills-inner {
-        padding: 0 24px;
-    }
-
-    .skills-grid {
-        grid-template-columns: 1fr; /* empile les 3 groupes */
-        gap: 16px;
-    }
-
-    .skill-group {
-        padding: 24px;
-    }
-}
-
-@media (max-width: 480px) {
-    .skills-inner {
-        padding: 0 16px;
-    }
-}
