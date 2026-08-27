@@ -10,7 +10,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Clé API non configurée" });
   }
 
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
   const systemPrompt = `
 Tu es l'assistant virtuel du portfolio de Quentin Tibo, développeur web fullstack basé en Belgique.
 Tes règles :
@@ -38,6 +38,10 @@ Tes règles :
             ],
           },
         ],
+        generationConfig: {
+          maxOutputTokens: 250,
+          temperature: 0.7,
+        },
       }),
     });
 
@@ -46,7 +50,7 @@ Tes règles :
     if (!response.ok || data.error) {
       console.error("Gemini API Error:", data.error || data);
       return res.status(response.status || 500).json({
-        reply: `Erreur API Gemini (${data.error?.message || "Vérifiez votre clé API et quotas"})`
+        reply: `Erreur API Gemini (${data.error?.message || "Vérifiez votre clé API et quotas"})`,
       });
     }
 
