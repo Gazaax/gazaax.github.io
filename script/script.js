@@ -41,16 +41,22 @@ async function sendMessage() {
       body: JSON.stringify({ message: text }),
     });
 
-    if (!res.ok) throw new Error("API request failed");
-
-    const data = await res.json();
+    const data = await res.json().catch(() => ({}));
     loadingDiv.classList.remove("loading");
     loadingDiv.innerHTML = "";
-    loadingDiv.textContent = data.reply || "Désolé, je n'ai pas pu générer de réponse.";
+
+    if (!res.ok) {
+      loadingDiv.textContent =
+        data.reply || data.error || "Erreur de communication avec l'API.";
+      return;
+    }
+
+    loadingDiv.textContent =
+      data.reply || "Désolé, je n'ai pas pu générer de réponse.";
   } catch (err) {
     loadingDiv.classList.remove("loading");
     loadingDiv.innerHTML = "";
-    loadingDiv.textContent = "Désolé, une erreur est survenue lors de la connexion au serveur.";
+    loadingDiv.textContent = "Erreur de connexion au serveur.";
   } finally {
     chatInput.disabled = false;
     chatSendBtn.disabled = false;

@@ -42,12 +42,21 @@ Tes règles :
     });
 
     const data = await response.json();
+
+    if (!response.ok || data.error) {
+      console.error("Gemini API Error:", data.error || data);
+      return res.status(response.status || 500).json({
+        reply: `Erreur API Gemini (${data.error?.message || "Vérifiez votre clé API et quotas"})`
+      });
+    }
+
     const reply =
       data.candidates?.[0]?.content?.parts?.[0]?.text ||
       "Désolé, je n'ai pas pu générer de réponse.";
 
     return res.status(200).json({ reply });
   } catch (error) {
+    console.error("Server Error:", error);
     return res
       .status(500)
       .json({ error: "Erreur lors de la communication avec le serveur" });
