@@ -219,6 +219,45 @@
   box-shadow: 0 2px 12px rgba(255, 159, 67, 0.25);
 }
 
+/* Éléments formatés dans les messages (liens, listes, gras) */
+.message a {
+  color: var(--accent-orange);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  word-break: break-all;
+  transition: opacity 0.2s ease;
+}
+
+.message a:hover {
+  opacity: 0.8;
+}
+
+.user-message a {
+  color: #101012;
+  font-weight: 600;
+}
+
+.message strong {
+  color: var(--primary-text);
+  font-weight: 600;
+}
+
+.user-message strong {
+  color: #101012;
+}
+
+.message ul {
+  margin: 6px 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.message li {
+  list-style-type: disc;
+}
+
 /* Indicateur de chargement (typing) */
 .message.loading {
   display: flex;
