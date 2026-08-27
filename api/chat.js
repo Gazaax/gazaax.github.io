@@ -52,6 +52,13 @@ Directives strictes :
 
     const data = await response.json();
 
+    if (!response.ok || data.error) {
+      console.error("Gemini API Error:", data.error || data);
+      return res.status(response.status || 500).json({
+        reply: `Erreur: Veuillez réessayer plus tard.`,
+      });
+    }
+
     const reply =
       data.candidates?.[0]?.content?.parts?.[0]?.text ||
       "Désolé, je n'ai pas pu générer de réponse.";
