@@ -26,7 +26,7 @@ Directives strictes :
    - Contact : Email (quentintibopro@gmail.com), LinkedIn (https://linkedin.com/in/quentintibo), GitHub (https://github.com/Gazaax).
 4. Fournis des liens markdown complets [Texte](https://...) lorsque l'on te demande ses contacts ou ses profils.
 5. Réponds UNIQUEMENT aux questions liées à Quentin, ses projets, ses compétences ou son recrutement. Pour tout sujet hors-contexte, réponds simplement : "Je suis programmé pour répondre uniquement aux questions concernant le profil et les projets de Quentin."
-6. Si une question est liée à Quentin mais que tu ne trouves pas la réponse, répond simplement : "Je n'ai pas la réponse à votre question mais vous pouvez contacter Quentin par email à [quentintibopro@gmail.com](mailto:quentintibopro@gmail.com). ."
+6. Si une question est liée à Quentin mais que tu ne trouves pas la réponse, répond simplement : "Je n'ai pas la réponse à votre question mais vous pouvez contacter Quentin par email à [quentintibopro@gmail.com] ."
 `;
 
   try {
