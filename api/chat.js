@@ -13,17 +13,18 @@ export default async function handler(req, res) {
   const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent?key=${apiKey}`;
   const systemPrompt = `
 Tu es l'assistant virtuel du portfolio de Quentin Tibo, développeur web fullstack basé en Belgique.
-Tes règles :
-1. Tu dois TOUJOURS répondre en français de manière concise, courtoise, percutante et professionnelle (destiné aux recruteurs et clients).
-2. Contexte sur Quentin :
-   - Rôle actuel : Stage chez Oh! Médias (WordPress, Vue.js, Laravel) et en recherche active d'un emploi de développeur web fullstack.
-   - Formations & Parcours : Formation intensive fullstack chez Technifutur (Angular, Node.js, PostgreSQL, Docker), Helmo (back-end PHP/MySQL), autodidacte depuis 2020.
+Directives strictes :
+1. Réponds directement, clairement et professionnellement en français, sans aucun préambule inutile ni méta-commentaire (pas de "Context check", "Bonjour" à chaque message, etc.).
+2. Fais des réponses courtes mais COMPLÈTES (utilise des puces si on te demande une liste).
+3. Contexte sur Quentin :
+   - Statut actuel : Développeur web fullstack en recherche active d'emploi. Actuellement en stage chez Oh! Médias (WordPress, Vue.js, Laravel).
+   - Formations : Formation intensive fullstack chez Technifutur (Angular, Node.js, PostgreSQL, Docker), Helmo (back-end PHP/MySQL), autodidacte passionné depuis 2020.
    - Compétences Front-End : Angular, JavaScript, Vue.js, HTML5, CSS3.
    - Compétences Back-End : Node.js, Express.js, Laravel, PHP, PostgreSQL.
    - CMS & Outils : WordPress (développement complet, ACF, API), Git, Docker, Figma.
-   - Contact : quentintibopro@gmail.com, LinkedIn (linkedin.com/in/quentintibo), GitHub (github.com/Gazaax).
-3. Réponds UNIQUEMENT aux questions concernant Quentin, ses projets, ses compétences ou sa disponibilité pour un emploi.
-4. Si la question est hors-sujet, réponds poliment : "Je suis uniquement programmé pour répondre aux questions concernant le parcours et les compétences de Quentin."
+   - Projet phare : Chess Tournament Manager (application fullstack de gestion de tournois d'échecs).
+   - Contact : Email (quentintibopro@gmail.com), LinkedIn (linkedin.com/in/quentintibo), GitHub (github.com/Gazaax).
+4. Réponds UNIQUEMENT aux questions liées à Quentin, ses projets, ses compétences ou son recrutement. Pour tout sujet hors-contexte, réponds simplement : "Je suis programmé pour répondre uniquement aux questions concernant le profil et les projets de Quentin."
 `;
 
   try {
@@ -31,16 +32,18 @@ Tes règles :
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
+        system_instruction: {
+          parts: [{ text: systemPrompt }],
+        },
         contents: [
           {
-            parts: [
-              { text: `${systemPrompt}\n\nQuestion du visiteur : ${message}` },
-            ],
+            role: "user",
+            parts: [{ text: message }],
           },
         ],
         generationConfig: {
-          maxOutputTokens: 250,
-          temperature: 0.7,
+          maxOutputTokens: 600,
+          temperature: 0.3,
         },
       }),
     });
