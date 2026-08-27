@@ -8,12 +8,6 @@
       rel="stylesheet"
     />
 
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
-    />
-
     <link href="img/logo.png" rel="icon" />
     <link href="style/main.css" rel="stylesheet" />
     <script src="script/form.js" defer></script>
@@ -774,16 +768,25 @@
       </footer>
     </main>
 
-    <button id="chat-toggle-btn">💬</button>
+    <button id="chat-toggle-btn" aria-label="Discuter avec l'assistant IA">
+      <span class="chat-btn-icon">✦</span>
+    </button>
 
     <div id="chatbot-container" class="chat-hidden">
       <div class="chat-header">
-        <h3>Assistant Portfolio</h3>
-        <button id="chat-close-btn">✕</button>
+        <div class="chat-header-info">
+          <span class="chat-status-dot"></span>
+          <div class="chat-title-group">
+            <h3>Quentin AI</h3>
+            <span class="chat-subtitle">Assistant Portfolio</span>
+          </div>
+        </div>
+        <button id="chat-close-btn" aria-label="Fermer le chat">✕</button>
       </div>
       <div id="chat-messages">
         <div class="message bot-message">
-          Bonjour ! Posez-moi une question sur le parcours de Quentin.
+          Bonjour ! Je suis l'assistant IA de Quentin. Posez-moi vos questions
+          sur ses compétences, ses projets ou son parcours.
         </div>
       </div>
       <div class="chat-input-area">
@@ -791,6 +794,7 @@
           type="text"
           id="chat-input"
           placeholder="Poser une question..."
+          autocomplete="off"
         />
         <button id="chat-send-btn">Envoyer</button>
       </div>
