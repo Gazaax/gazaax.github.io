@@ -166,21 +166,29 @@
   flex-direction: column;
   gap: 12px;
   background: rgba(16, 16, 18, 0.4);
+  scroll-behavior: smooth;
+  /* Support standard (Firefox / navigateurs récents) */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 159, 67, 0.35) transparent;
 }
 
-/* Scrollbar personnalisée */
+/* Scrollbar personnalisée WebKit (Chrome, Safari, Edge, Vivaldi) */
 #chat-messages::-webkit-scrollbar {
-  width: 4px;
+  width: 5px;
 }
+
 #chat-messages::-webkit-scrollbar-track {
   background: transparent;
 }
+
 #chat-messages::-webkit-scrollbar-thumb {
-  background: var(--border);
-  border-radius: 4px;
+  background: rgba(255, 159, 67, 0.3);
+  border-radius: 10px;
+  transition: background 0.2s ease;
 }
+
 #chat-messages::-webkit-scrollbar-thumb:hover {
-  background: var(--accent-mid);
+  background: var(--accent-orange);
 }
 
 /* Bulles de messages */
