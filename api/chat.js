@@ -10,7 +10,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Clé API non configurée" });
   }
 
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent?key=${apiKey}`;
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=${apiKey}`;
   const systemPrompt = `
 Tu es l'assistant virtuel du portfolio de Quentin Tibo, développeur web fullstack basé en Belgique.
 Directives strictes :
@@ -44,7 +44,7 @@ Directives strictes :
           },
         ],
         generationConfig: {
-          maxOutputTokens: 600,
+          maxOutputTokens: 800,
           temperature: 0.3,
         },
       }),
