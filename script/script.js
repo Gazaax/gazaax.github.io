@@ -13,7 +13,7 @@ const repeatPunchlines = [
   "Tu as un doute ou tu testes ma mémoire ? 😄 Revoici l'information :",
   "Rien n'a changé depuis tout à l'heure ! 🚀 :",
   "Pas de souci, revoici un petit rappel :",
-  "Je confirme ce que je disais un peu plus haut 👆 :"
+  "Je confirme ce que je disais un peu plus haut 👆 :",
 ];
 
 chatToggleBtn.addEventListener("click", () => {
@@ -52,9 +52,12 @@ async function sendMessage() {
     // Économie de tokens : réponse instantanée avec clin d'œil après un léger délai réaliste
     setTimeout(() => {
       loadingDiv.classList.remove("loading");
-      const randomIntro = repeatPunchlines[Math.floor(Math.random() * repeatPunchlines.length)];
-      loadingDiv.innerHTML = formatMarkdown(`${randomIntro}\n\n${cachedMatch.reply}`);
-      
+      const randomIntro =
+        repeatPunchlines[Math.floor(Math.random() * repeatPunchlines.length)];
+      loadingDiv.innerHTML = formatMarkdown(
+        `${randomIntro}\n\n${cachedMatch.reply}`,
+      );
+
       chatInput.disabled = false;
       chatSendBtn.disabled = false;
       chatInput.focus();
@@ -76,19 +79,20 @@ async function sendMessage() {
 
     if (!res.ok) {
       loadingDiv.innerHTML = formatMarkdown(
-        data.reply || data.error || "Erreur de communication avec l'API."
+        data.reply || data.error || "Erreur de communication avec l'API.",
       );
       return;
     }
 
-    const replyText = data.reply || "Désolé, je n'ai pas pu générer de réponse.";
+    const replyText =
+      data.reply || "Désolé, je n'ai pas pu générer de réponse.";
     loadingDiv.innerHTML = formatMarkdown(replyText);
 
     // Enregistrement dans le cache pour les futures questions
     conversationCache.push({
       original: text,
       keywords: extractKeywords(text),
-      reply: replyText
+      reply: replyText,
     });
   } catch (err) {
     loadingDiv.classList.remove("loading");
@@ -140,16 +144,60 @@ function cleanText(str) {
  */
 function extractKeywords(str) {
   const stopWords = new Set([
-    "le", "la", "les", "un", "une", "des", "du", "de", "d", "c", "ce", "cet",
-    "cette", "ces", "est", "sont", "qui", "que", "quoi", "comment", "quand",
-    "ou", "quel", "quelle", "quelles", "quels", "pour", "dans", "sur", "avec",
-    "par", "quentin", "tibo", "ton", "sa", "son", "ses", "tes", "mes", "faire",
-    "fait", "a", "au", "aux", "peux", "peut", "estce", "moi", "lui"
+    "le",
+    "la",
+    "les",
+    "un",
+    "une",
+    "des",
+    "du",
+    "de",
+    "d",
+    "c",
+    "ce",
+    "cet",
+    "cette",
+    "ces",
+    "est",
+    "sont",
+    "qui",
+    "que",
+    "quoi",
+    "comment",
+    "quand",
+    "ou",
+    "quel",
+    "quelle",
+    "quelles",
+    "quels",
+    "pour",
+    "dans",
+    "sur",
+    "avec",
+    "par",
+    "quentin",
+    "tibo",
+    "ton",
+    "sa",
+    "son",
+    "ses",
+    "tes",
+    "mes",
+    "faire",
+    "fait",
+    "a",
+    "au",
+    "aux",
+    "peux",
+    "peut",
+    "estce",
+    "moi",
+    "lui",
   ]);
 
   return cleanText(str)
     .split(/\s+/)
-    .filter(word => word.length > 2 && !stopWords.has(word));
+    .filter((word) => word.length > 2 && !stopWords.has(word));
 }
 
 /**
@@ -169,12 +217,15 @@ function findSimilarQuestion(newQuestion) {
 
     // 2. Correspondance par similarité des mots-clés (Jaccard)
     if (newWords.length > 0 && item.keywords.length > 0) {
-      const intersection = newWords.filter(w => item.keywords.includes(w));
+      const intersection = newWords.filter((w) => item.keywords.includes(w));
       const union = new Set([...newWords, ...item.keywords]);
       const similarity = intersection.length / union.size;
 
       // Si au moins 60% de mots-clés communs ou 2+ mots-clés forts identiques
-      if (similarity >= 0.55 || (intersection.length >= 2 && intersection.length === newWords.length)) {
+      if (
+        similarity >= 0.55 ||
+        (intersection.length >= 2 && intersection.length === newWords.length)
+      ) {
         return item;
       }
     }
@@ -195,22 +246,27 @@ function formatMarkdown(text) {
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;");
 
-  // 2. Liens markdown: [texte](https://...)
+  // 2. Liens markdown: [texte](https://...) ou [texte](mailto:...)
   html = html.replace(
-    /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g,
-    '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>'
+    /\[([^\]]+)\]\(((?:https?:\/\/|mailto:)[^\s)]+)\)/g,
+    (match, label, url) => {
+      const target = url.startsWith("mailto:")
+        ? ""
+        : ' target="_blank" rel="noopener noreferrer"';
+      return `<a href="${url}"${target}>${label}</a>`;
+    },
   );
 
-  // 3. Adresses e-mail
+  // 3. Adresses e-mail brutes (non déjà transformées en balise <a>)
   html = html.replace(
-    /([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/g,
-    '<a href="mailto:$1">$1</a>'
+    /(?<!href="|mailto:|>)([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})(?![^<]*<\/a>)/g,
+    '<a href="mailto:$1">$1</a>',
   );
 
-  // 4. Liens URL bruts
+  // 4. Liens URL bruts (non déjà transformés en balise <a>)
   html = html.replace(
-    /(?<!href=")(https?:\/\/[^\s<]+)/g,
-    '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>'
+    /(?<!href="|">)(https?:\/\/[^\s<)]+)(?![^<]*<\/a>)/g,
+    '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>',
   );
 
   // 5. Gras
